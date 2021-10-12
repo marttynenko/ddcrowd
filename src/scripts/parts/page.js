@@ -67,11 +67,16 @@ export default class Page {
         if (document.querySelector('.crowd-search-toggler')) {
             const crowdToggler = document.querySelectorAll('.crowd-search-toggler');
 
-            crowdToggler.forEach(el => el.addEventListener('click', (e) => {
+            crowdToggler.forEach((el,index,arr) => el.addEventListener('click', (e) => {
                 e.preventDefault();
                 el.classList.toggle('opened')
                 const target = el.dataset.target || null
                 if (!target || !document.querySelector(target)) return
+                arr.forEach(item => {
+                    if (item != el) {
+                        document.querySelector(item.dataset.target).style.display = 'none'
+                    }
+                })
                 const display = document.querySelector(target).style.display
                 document.querySelector(target).style.display = display == 'block' ? 'none' : 'block'
             }))
@@ -94,7 +99,15 @@ export default class Page {
                             'advlist autolink lists link image anchor',
                             'media table paste imagetools wordcount autoresize'
                         ],
-                        toolbar: 'bold italic underline strikethrough | styleselect | alignleft aligncenter alignright alignjustify | bullist numlist | table link'
+                        toolbar: 'bold italic underline strikethrough | styleselect | alignleft aligncenter alignright alignjustify | bullist numlist | table link',
+                        content_style: `@font-face {
+                            font-family: PPPangramSans;
+                            src: url('./fonts/pangram/PPPangramSans-Medium.woff2') format('woff2'), url('./fonts/pangram/PPPangramSans-Medium.woff') format('woff');
+                            font-weight: normal;
+                            font-style: normal;
+                            font-display: swap;
+                          }
+                          body { font-family: PPPangramSans; }`,
                         //путь загрузки изображений
                         // images_upload_url: '...',
                         //обработчик загрузки, смотреть https://www.tiny.cloud/docs/general-configuration-guide/upload-images/
@@ -126,14 +139,34 @@ export default class Page {
 
         //снимаем выделение с группы чекбоксов/радио
         const uncheckLink = document.querySelectorAll('.tags-uncheck')
-        uncheckLink.forEach(el => el.addEventListener('click', (e) => {
-            e.preventDefault();
+        uncheckLink.forEach(el => {
             const group = el.dataset.group || null
             if (!group || !document.querySelector(group)) return
-            document
-                .querySelectorAll(group)
-                .forEach(item => item.checked = false)
-        }));
+
+            //снимаем по выделение с группы чипсов
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                document
+                    .querySelectorAll(group)
+                    .forEach(item => item.checked = false)
+                el.classList.remove('active')
+            })
+
+            //делаем кнопку видимой при активных чипсах
+            document.querySelectorAll(group)
+                .forEach(item => {
+                    item.addEventListener('change',()=> {
+                        if (item.checked === true) {
+                            el.classList.add('active')
+                        } else {
+                            el.classList.remove('active')
+                        }
+                    })
+                })
+            
+
+            
+        });
 
         //добавляем поля с дополнительными вопросами вопросами
         const reqQuestions = {
@@ -184,6 +217,39 @@ export default class Page {
             el.classList.toggle('closed')
             next.style.display = next.style.display==='none' ? 'block' : 'none'
         }))
+
+
+        if (document.querySelector('.date-mask')) {
+            FARBA.lazyLibraryLoad(
+                'https://cdnjs.cloudflare.com/ajax/libs/imask/6.2.2/imask.min.js',
+                '',
+                () => {
+                    IMask(document.querySelector('.date-mask'), {
+                        mask: Date,
+                        pattern: '`d.`m.Y', 
+                        blocks: {
+                            d: {
+                                mask: IMask.MaskedRange,
+                                from: 1,
+                                to: 31,
+                                maxLength: 2,
+                            },
+                            m: {
+                                mask: IMask.MaskedRange,
+                                from: 1,
+                                to: 12,
+                                maxLength: 2,
+                            },
+                            Y: {
+                                mask: IMask.MaskedRange,
+                                from: 1900,
+                                to: 2999,
+                            }
+                        }
+                    })
+                }
+            )
+        }
         
 
     }
