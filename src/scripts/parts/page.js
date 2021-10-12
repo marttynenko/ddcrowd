@@ -75,6 +75,7 @@ export default class Page {
                 arr.forEach(item => {
                     if (item != el) {
                         document.querySelector(item.dataset.target).style.display = 'none'
+                        item.classList.remove('opened')
                     }
                 })
                 const display = document.querySelector(target).style.display

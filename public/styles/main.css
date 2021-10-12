@@ -390,103 +390,6 @@ template {
     grid-area: avatar;
   }
 }
-.banner {
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 3rem 0;
-  min-height: 11rem;
-  background: #B9E6FF;
-  overflow: hidden;
-}
-.banner__inner {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 2fr max-content;
-  grid-gap: 3rem;
-  align-items: center;
-  padding: 0 0 0 20rem;
-}
-@media (max-width: 1023px) {
-  .banner__inner {
-    display: block;
-  }
-}
-@media (max-width: 649px) {
-  .banner__inner {
-    padding: 0 16.2rem 0 0;
-  }
-}
-.banner__inner::after {
-  content: '';
-  position: absolute;
-  left: -4rem;
-  top: 50%;
-  transform: translateY(-40%);
-  width: 21.6rem;
-  height: 19.7rem;
-  background: url('../img/banner.png') center center no-repeat;
-  background-size: contain;
-}
-@media (max-width: 649px) {
-  .banner__inner::after {
-    left: auto;
-    right: 0;
-    top: 0;
-    transform: translateX(5rem);
-  }
-}
-.banner__title {
-  font-size: 1.8rem;
-  line-height: 1.33;
-  font-weight: 500;
-  margin: 0;
-  font-weight: normal;
-}
-@media (max-width: 1023px) {
-  .banner__title {
-    margin-bottom: 1.5rem;
-  }
-}
-.banner__text {
-  font-size: 1.5rem;
-  line-height: 1.33;
-  margin: 0;
-  opacity: 0.5;
-}
-@media (max-width: 1023px) {
-  .banner__text {
-    margin-bottom: 2.5rem;
-  }
-}
-html {
-  font-size: 10px;
-}
-@media (max-width: 1139px) and (min-width: 1024px) {
-  html {
-    font-size: 9px;
-  }
-}
-@media (max-width: 739px) and (min-width: 650px) {
-  html {
-    font-size: 9px;
-  }
-}
-@media (max-width: 419px) {
-  html {
-    font-size: 9px;
-  }
-}
-body {
-  font-size: 1.5rem;
-  line-height: 1.33;
-  font-family: PPPangramSans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-@media (max-width: 1023px) {
-  .hide-md {
-    display: none;
-  }
-}
 .bonus {
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -587,6 +490,118 @@ body {
 .button_wide {
   width: 100%;
 }
+.banner {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 3rem 0;
+  min-height: 11rem;
+  background: #B9E6FF;
+  overflow: hidden;
+}
+.banner__inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr max-content;
+  grid-gap: 3rem;
+  align-items: center;
+  padding: 0 0 0 20rem;
+}
+@media (max-width: 1023px) {
+  .banner__inner {
+    display: block;
+  }
+}
+@media (max-width: 649px) {
+  .banner__inner {
+    padding: 0 16.2rem 0 0;
+  }
+}
+.banner__inner::after {
+  content: '';
+  position: absolute;
+  left: -4rem;
+  top: 50%;
+  transform: translateY(-40%);
+  width: 21.6rem;
+  height: 19.7rem;
+  background: url('../img/banner.png') center center no-repeat;
+  background-size: contain;
+}
+@media (max-width: 649px) {
+  .banner__inner::after {
+    left: auto;
+    right: 0;
+    top: 0;
+    transform: translateX(5rem);
+  }
+}
+.banner__title {
+  font-size: 1.8rem;
+  line-height: 1.33;
+  font-weight: 500;
+  margin: 0;
+  font-weight: normal;
+}
+@media (max-width: 1023px) {
+  .banner__title {
+    margin-bottom: 1.5rem;
+  }
+}
+.banner__text {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  margin: 0;
+  opacity: 0.5;
+}
+@media (max-width: 1023px) {
+  .banner__text {
+    margin-bottom: 2.5rem;
+  }
+}
+html {
+  font-size: 10px;
+}
+@media (max-width: 1139px) and (min-width: 1024px) {
+  html {
+    font-size: 9px;
+  }
+}
+@media (max-width: 739px) and (min-width: 650px) {
+  html {
+    font-size: 9px;
+  }
+}
+@media (max-width: 419px) {
+  html {
+    font-size: 9px;
+  }
+}
+body {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  font-family: PPPangramSans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+@media (max-width: 1023px) {
+  .hide-md {
+    display: none;
+  }
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
+}
+@media (max-width: 1023px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 649px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
 .card {
   position: relative;
   z-index: 0;
@@ -662,21 +677,6 @@ body {
 }
 .card__progress {
   width: 10rem;
-}
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 3rem;
-}
-@media (max-width: 1023px) {
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 649px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
 }
 .cert {
   display: grid;
@@ -787,29 +787,6 @@ body {
   display: block;
   padding: 0 0 0 2.5rem;
 }
-.container {
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0 3rem;
-  max-width: 117rem;
-  width: 100%;
-}
-@media (max-width: 1023px) {
-  .container {
-    max-width: 77.5rem;
-  }
-}
-@media (max-width: 649px) {
-  .container {
-    box-sizing: content-box;
-    max-width: 36rem;
-    width: auto;
-  }
-}
-.course-buy {
-  display: grid;
-  grid-gap: 2.6rem;
-}
 .course-content__section.active .course-content__panels {
   display: block;
 }
@@ -840,56 +817,23 @@ body {
 .course-content__panels {
   display: none;
 }
-.course-desc__tabs {
-  margin: 0 0 4rem;
-}
-.course-desc__desc {
-  max-width: 67rem;
-  color: rgba(7, 16, 19, 0.5);
+.container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 3rem;
+  max-width: 117rem;
+  width: 100%;
 }
 @media (max-width: 1023px) {
-  .course-desc__desc {
-    margin-bottom: 8rem;
+  .container {
+    max-width: 77.5rem;
   }
 }
-.course-desc__desc h1,
-.course-desc__desc h2,
-.course-desc__desc h3 {
-  font-weight: normal;
-  margin: 0 0 3rem;
-}
-.course-desc__desc h3 {
-  font-size: 1.8rem;
-  line-height: 1.33;
-  font-weight: 500;
-}
-.course-desc__desc h2 {
-  font-size: 2.4rem;
-  line-height: 1.25;
-  font-weight: 600;
-}
-.course-desc__desc h1 {
-  font-size: 4.2rem;
-  line-height: 1.19;
-}
-.course-desc__desc p {
-  font-size: 1.5rem;
-  line-height: 1.33;
-  margin: 1em 0;
-}
-.course-desc__content {
-  display: flex;
-  justify-content: space-between;
-}
-@media (max-width: 1023px) {
-  .course-desc__content {
-    display: block;
-  }
-}
-@media (max-width: 1023px) {
-  .course-desc__bonus {
-    display: flex;
-    justify-content: center;
+@media (max-width: 649px) {
+  .container {
+    box-sizing: content-box;
+    max-width: 36rem;
+    width: auto;
   }
 }
 .course-head {
@@ -993,6 +937,10 @@ body {
   .course-head__info-icon {
     display: none;
   }
+}
+.course-buy {
+  display: grid;
+  grid-gap: 2.6rem;
 }
 .course-panel {
   position: relative;
@@ -1104,6 +1052,58 @@ body {
 .cropper-point.point-w,
 .cropper-point.point-s {
   display: none;
+}
+.course-desc__tabs {
+  margin: 0 0 4rem;
+}
+.course-desc__desc {
+  max-width: 67rem;
+  color: rgba(7, 16, 19, 0.5);
+}
+@media (max-width: 1023px) {
+  .course-desc__desc {
+    margin-bottom: 8rem;
+  }
+}
+.course-desc__desc h1,
+.course-desc__desc h2,
+.course-desc__desc h3 {
+  font-weight: normal;
+  margin: 0 0 3rem;
+}
+.course-desc__desc h3 {
+  font-size: 1.8rem;
+  line-height: 1.33;
+  font-weight: 500;
+}
+.course-desc__desc h2 {
+  font-size: 2.4rem;
+  line-height: 1.25;
+  font-weight: 600;
+}
+.course-desc__desc h1 {
+  font-size: 4.2rem;
+  line-height: 1.19;
+}
+.course-desc__desc p {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  margin: 1em 0;
+}
+.course-desc__content {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1023px) {
+  .course-desc__content {
+    display: block;
+  }
+}
+@media (max-width: 1023px) {
+  .course-desc__bonus {
+    display: flex;
+    justify-content: center;
+  }
 }
 @font-face {
   font-family: 'Circe';
@@ -2865,6 +2865,51 @@ i.emoji {
   line-height: 1.19;
   margin: 0 0 4rem;
 }
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  width: 114px;
+  height: 40px;
+  background: url("data:image/svg+xml,%3Csvg%20width%3D%22112%22%20height%3D%2239%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20clip-path%3D%22url(%23clip0)%22%3E%3Cpath%20d%3D%22M0%2013h12c7.18%200%2013%205.82%2013%2013s-5.82%2013-13%2013H0V13z%22%20fill%3D%22%23671090%22%2F%3E%3Cpath%20opacity%3D%22.5%22%20d%3D%22M13%200h13c7.18%200%2013%205.82%2013%2013s-5.82%2013-13%2013H13V0z%22%20fill%3D%22%23B53CEE%22%2F%3E%3Cpath%20d%3D%22M4.743%2048.129l-.006-4.136h-.806l-1.55%202.57-1.575-2.57H0v4.136h.914v-2.428l1.238%201.99h.433l1.238-2.038.006%202.476h.914zm2.013-.768v-.957H8.71v-.745H6.756v-.898h2.212v-.768h-3.18v4.136h3.258v-.768h-2.29zm5.055.839c.733%200%201.34-.26%201.737-.739l-.625-.567a1.35%201.35%200%2001-1.058.49c-.787%200-1.346-.543-1.346-1.323%200-.78.559-1.323%201.346-1.323.421%200%20.776.165%201.058.484l.625-.567c-.396-.473-1.004-.733-1.73-.733-1.311%200-2.285.893-2.285%202.14%200%201.246.974%202.138%202.278%202.138zm5.547-4.207H13.71v.78h1.34v3.356h.963v-3.356h1.346v-.78zm2.561%204.207c1.322%200%202.302-.904%202.302-2.139%200-1.235-.98-2.139-2.302-2.139-1.329%200-2.303.91-2.303%202.14%200%201.228.974%202.138%202.303%202.138zm0-.815c-.752%200-1.317-.538-1.317-1.324s.565-1.323%201.317-1.323c.751%200%201.316.537%201.316%201.323%200%20.786-.565%201.324-1.316%201.324zm8.509-3.392h-2.97v4.136h.968l-.006-3.356h2.002l.006-.78zm3.822%203.357v-3.357h-3.234l-.048%201.294c-.042%201.158-.18%202.044-.727%202.062h-.169l-.006%201.637h.902v-.857h2.97v.857h.901v-1.637h-.589zm-2.422-1.974l.018-.603h1.442v2.576h-1.881c.288-.337.384-1.093.42-1.973zm4.635%201.985v-.957h1.953v-.745h-1.953v-.898h2.212v-.768h-3.18v4.136h3.258v-.768h-2.29zm7.664-3.368v1.631h-1.911v-1.63h-.974v4.135h.974v-1.696h1.911v1.696h.974v-4.136h-.974zm5.251%204.136H48.4l-1.882-4.136h-.962l-1.875%204.136h.998l.372-.886h1.954l.373.886zm-2.014-1.613l.667-1.583.667%201.583h-1.334zm5.771-2.523v1.861c-.27.119-.583.184-.901.184-.583%200-.902-.29-.902-.857v-1.188h-.962v1.294c0%20.999.62%201.548%201.75%201.548.312%200%20.649-.065%201.015-.195v1.489h.962v-4.136h-.962zm2.008%204.136h.92l2.008-2.688v2.688h.962v-4.136h-.914l-2.008%202.694v-2.694h-.968v4.136zm7.823-4.136v1.631h-1.912v-1.63h-.974v4.135h.974v-1.696h1.912v1.696h.974v-4.136h-.974zm5.25%204.136h1.022l-1.882-4.136h-.961l-1.876%204.136h.998l.373-.886h1.953l.373.886zm-2.014-1.613l.668-1.583.667%201.583h-1.335zm4.562.845v-.957h1.954v-.745h-1.954v-.898h2.212v-.768h-3.18v4.136h3.258v-.768h-2.29zm6.293-3.368h-3.649v.78h1.34v3.356h.962v-3.356h1.347v-.78zM77.6%2048.2c.733%200%201.34-.26%201.737-.739l-.626-.567a1.35%201.35%200%2001-1.058.49c-.787%200-1.346-.543-1.346-1.323%200-.78.559-1.323%201.346-1.323.421%200%20.776.165%201.058.484l.626-.567c-.397-.473-1.004-.733-1.732-.733-1.31%200-2.284.893-2.284%202.14%200%201.246.974%202.138%202.278%202.138zm3.834-4.207c-1.112%200-1.815.58-1.815%201.542%200%20.65.318%201.123.883%201.347l-.877%201.247h1.028l.745-1.099h.89v1.099h.962v-4.136h-1.816zm.024.78h.83v1.5h-.854c-.547%200-.83-.27-.83-.75%200-.496.301-.75.854-.75zm4.548%203.356h1.996c1.082%200%201.701-.478%201.701-1.306%200-.791-.547-1.217-1.563-1.217h-1.166v-.85h2.429v-.763h-3.397v4.136zm.968-.709v-1.11h.974c.51%200%20.77.177.77.543%200%20.372-.271.567-.77.567h-.974zm3.47.709h.92l2.008-2.688v2.688h.962v-4.136h-.914l-2.008%202.694v-2.694h-.968v4.136zm7.33-2.156c.373-.16.607-.479.607-.88%200-.751-.841-1.188-1.815-1.188a3.22%203.22%200%2000-1.443.337l.294.744a2.392%202.392%200%20011.13-.295c.475%200%20.848.177.848.514%200%20.271-.228.443-.625.443h-.956v.72h1.028c.439%200%20.728.154.728.467%200%20.384-.451.585-1.004.585a2.53%202.53%200%2001-1.263-.337l-.3.686a3.441%203.441%200%20001.677.43c1.01%200%201.875-.448%201.875-1.228%200-.467-.294-.833-.781-.998zm4.438-1.98v1.631H100.3v-1.63h-.974v4.135h.974v-1.696h1.912v1.696h.974v-4.136h-.974zm2.996%203.368v-.957h1.953v-.745h-1.953v-.898h2.212v-.768h-3.18v4.136h3.258v-.768h-2.29zm5.055.839c.733%200%201.34-.26%201.737-.739l-.625-.567a1.35%201.35%200%2001-1.058.49c-.788%200-1.347-.543-1.347-1.323%200-.78.559-1.323%201.347-1.323.421%200%20.775.165%201.058.484l.625-.567c-.397-.473-1.004-.733-1.731-.733-1.311%200-2.285.893-2.285%202.14%200%201.246.974%202.138%202.279%202.138zM47.866%2034.557h4.673c3.276%200%205.52-1.873%205.52-4.857%200-2.983-2.244-4.857-5.52-4.857h-4.673v9.714zm2.795-2.192v-5.329h1.765c1.68%200%202.81.985%202.81%202.664%200%201.68-1.13%202.665-2.81%202.665h-1.765zm14.701%202.387c3.163%200%205.492-2.138%205.492-5.052%200-2.914-2.33-5.05-5.492-5.05-3.163%200-5.492%202.136-5.492%205.05%200%202.915%202.33%205.052%205.492%205.052zm0-2.276c-1.497%200-2.669-1.097-2.669-2.776%200-1.679%201.172-2.775%202.669-2.775s2.669%201.096%202.669%202.775c0%201.68-1.172%202.776-2.67%202.776zm7.804%202.081h7.511V32.38h-4.716v-7.535h-2.795v9.713zm9.464%200h2.796v-9.714H82.63v9.714zm12.297-9.714v5.177l-4.363-5.177h-2.302v9.714h2.74v-5.176l4.362%205.176h2.302v-9.714h-2.74zm12.956%209.714h2.909l-4.377-9.714h-2.753l-4.363%209.714h2.852l.776-1.887h4.18l.776%201.887zm-4.137-3.913l1.271-3.108%201.271%203.108h-2.542zM47.914%2018.393h4.902c3.436%200%205.791-1.965%205.791-5.095s-2.355-5.094-5.79-5.094h-4.903v10.189zm2.933-2.3v-5.59h1.85c1.763%200%202.948%201.034%202.948%202.795%200%201.762-1.185%202.795-2.947%202.795h-1.851zm9.303%202.3h2.933V8.203H60.15v10.19zm11.965-2.518a3.78%203.78%200%2001-1.585.335c-1.747%200-2.932-1.194-2.932-2.912%200-1.76%201.185-2.91%202.962-2.91.992%200%201.807.363%202.518%201.135l1.866-1.66C73.922%208.655%2072.352%208%2070.412%208c-3.362%200-5.776%202.198-5.776%205.298s2.414%205.299%205.717%205.299c1.51%200%203.154-.451%204.354-1.296v-4.22h-2.592v2.794zm4.451%202.518h2.932V8.203h-2.932v10.19zm7.225%200h2.933v-7.904h3.17V8.204h-9.287v2.285h3.184v7.904zm14.435%200h3.051l-4.591-10.19h-2.889l-4.576%2010.19h2.992l.814-1.98h4.384l.815%201.98zm-4.34-4.105l1.333-3.26%201.333%203.26h-2.666zm8.222%204.105h7.879v-2.285h-4.946V8.204h-2.933v10.189zM23.204%2047.01c-.327%200-.577.223-.577.562%200%20.24.125.421.321.497l-.262.931h.59l.34-.843c.136-.322.16-.433.16-.585%200-.334-.238-.562-.572-.562z%22%20fill%3D%22%23B53CEE%22%2F%3E%3C%2Fg%3E%3Cdefs%3E%3CclipPath%20id%3D%22clip0%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M0%200h112v39H0z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3C%2Fsvg%3E") center center no-repeat;
+  background-size: 100%;
+  text-indent: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.not-fount {
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  min-height: 50rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 8rem;
+  margin-bottom: -8rem;
+}
+.not-fount__title {
+  font-size: 4.2rem;
+  line-height: 1.19;
+  margin: 0 0 3.5rem;
+}
+@media (max-width: 649px) {
+  .not-fount__title {
+    margin-top: -35%;
+  }
+}
+.not-fount__cover {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  object-position: 5.5rem 5.5rem;
+}
+.not-fount__action {
+  margin: 0;
+  width: 26.9rem;
+}
 .input {
   display: flex;
   align-items: center;
@@ -2948,51 +2993,6 @@ i.emoji {
 }
 .input__margin {
   margin-bottom: 15px;
-}
-.logo {
-  display: inline-block;
-  vertical-align: top;
-  width: 114px;
-  height: 40px;
-  background: url("data:image/svg+xml,%3Csvg%20width%3D%22112%22%20height%3D%2239%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20clip-path%3D%22url(%23clip0)%22%3E%3Cpath%20d%3D%22M0%2013h12c7.18%200%2013%205.82%2013%2013s-5.82%2013-13%2013H0V13z%22%20fill%3D%22%23671090%22%2F%3E%3Cpath%20opacity%3D%22.5%22%20d%3D%22M13%200h13c7.18%200%2013%205.82%2013%2013s-5.82%2013-13%2013H13V0z%22%20fill%3D%22%23B53CEE%22%2F%3E%3Cpath%20d%3D%22M4.743%2048.129l-.006-4.136h-.806l-1.55%202.57-1.575-2.57H0v4.136h.914v-2.428l1.238%201.99h.433l1.238-2.038.006%202.476h.914zm2.013-.768v-.957H8.71v-.745H6.756v-.898h2.212v-.768h-3.18v4.136h3.258v-.768h-2.29zm5.055.839c.733%200%201.34-.26%201.737-.739l-.625-.567a1.35%201.35%200%2001-1.058.49c-.787%200-1.346-.543-1.346-1.323%200-.78.559-1.323%201.346-1.323.421%200%20.776.165%201.058.484l.625-.567c-.396-.473-1.004-.733-1.73-.733-1.311%200-2.285.893-2.285%202.14%200%201.246.974%202.138%202.278%202.138zm5.547-4.207H13.71v.78h1.34v3.356h.963v-3.356h1.346v-.78zm2.561%204.207c1.322%200%202.302-.904%202.302-2.139%200-1.235-.98-2.139-2.302-2.139-1.329%200-2.303.91-2.303%202.14%200%201.228.974%202.138%202.303%202.138zm0-.815c-.752%200-1.317-.538-1.317-1.324s.565-1.323%201.317-1.323c.751%200%201.316.537%201.316%201.323%200%20.786-.565%201.324-1.316%201.324zm8.509-3.392h-2.97v4.136h.968l-.006-3.356h2.002l.006-.78zm3.822%203.357v-3.357h-3.234l-.048%201.294c-.042%201.158-.18%202.044-.727%202.062h-.169l-.006%201.637h.902v-.857h2.97v.857h.901v-1.637h-.589zm-2.422-1.974l.018-.603h1.442v2.576h-1.881c.288-.337.384-1.093.42-1.973zm4.635%201.985v-.957h1.953v-.745h-1.953v-.898h2.212v-.768h-3.18v4.136h3.258v-.768h-2.29zm7.664-3.368v1.631h-1.911v-1.63h-.974v4.135h.974v-1.696h1.911v1.696h.974v-4.136h-.974zm5.251%204.136H48.4l-1.882-4.136h-.962l-1.875%204.136h.998l.372-.886h1.954l.373.886zm-2.014-1.613l.667-1.583.667%201.583h-1.334zm5.771-2.523v1.861c-.27.119-.583.184-.901.184-.583%200-.902-.29-.902-.857v-1.188h-.962v1.294c0%20.999.62%201.548%201.75%201.548.312%200%20.649-.065%201.015-.195v1.489h.962v-4.136h-.962zm2.008%204.136h.92l2.008-2.688v2.688h.962v-4.136h-.914l-2.008%202.694v-2.694h-.968v4.136zm7.823-4.136v1.631h-1.912v-1.63h-.974v4.135h.974v-1.696h1.912v1.696h.974v-4.136h-.974zm5.25%204.136h1.022l-1.882-4.136h-.961l-1.876%204.136h.998l.373-.886h1.953l.373.886zm-2.014-1.613l.668-1.583.667%201.583h-1.335zm4.562.845v-.957h1.954v-.745h-1.954v-.898h2.212v-.768h-3.18v4.136h3.258v-.768h-2.29zm6.293-3.368h-3.649v.78h1.34v3.356h.962v-3.356h1.347v-.78zM77.6%2048.2c.733%200%201.34-.26%201.737-.739l-.626-.567a1.35%201.35%200%2001-1.058.49c-.787%200-1.346-.543-1.346-1.323%200-.78.559-1.323%201.346-1.323.421%200%20.776.165%201.058.484l.626-.567c-.397-.473-1.004-.733-1.732-.733-1.31%200-2.284.893-2.284%202.14%200%201.246.974%202.138%202.278%202.138zm3.834-4.207c-1.112%200-1.815.58-1.815%201.542%200%20.65.318%201.123.883%201.347l-.877%201.247h1.028l.745-1.099h.89v1.099h.962v-4.136h-1.816zm.024.78h.83v1.5h-.854c-.547%200-.83-.27-.83-.75%200-.496.301-.75.854-.75zm4.548%203.356h1.996c1.082%200%201.701-.478%201.701-1.306%200-.791-.547-1.217-1.563-1.217h-1.166v-.85h2.429v-.763h-3.397v4.136zm.968-.709v-1.11h.974c.51%200%20.77.177.77.543%200%20.372-.271.567-.77.567h-.974zm3.47.709h.92l2.008-2.688v2.688h.962v-4.136h-.914l-2.008%202.694v-2.694h-.968v4.136zm7.33-2.156c.373-.16.607-.479.607-.88%200-.751-.841-1.188-1.815-1.188a3.22%203.22%200%2000-1.443.337l.294.744a2.392%202.392%200%20011.13-.295c.475%200%20.848.177.848.514%200%20.271-.228.443-.625.443h-.956v.72h1.028c.439%200%20.728.154.728.467%200%20.384-.451.585-1.004.585a2.53%202.53%200%2001-1.263-.337l-.3.686a3.441%203.441%200%20001.677.43c1.01%200%201.875-.448%201.875-1.228%200-.467-.294-.833-.781-.998zm4.438-1.98v1.631H100.3v-1.63h-.974v4.135h.974v-1.696h1.912v1.696h.974v-4.136h-.974zm2.996%203.368v-.957h1.953v-.745h-1.953v-.898h2.212v-.768h-3.18v4.136h3.258v-.768h-2.29zm5.055.839c.733%200%201.34-.26%201.737-.739l-.625-.567a1.35%201.35%200%2001-1.058.49c-.788%200-1.347-.543-1.347-1.323%200-.78.559-1.323%201.347-1.323.421%200%20.775.165%201.058.484l.625-.567c-.397-.473-1.004-.733-1.731-.733-1.311%200-2.285.893-2.285%202.14%200%201.246.974%202.138%202.279%202.138zM47.866%2034.557h4.673c3.276%200%205.52-1.873%205.52-4.857%200-2.983-2.244-4.857-5.52-4.857h-4.673v9.714zm2.795-2.192v-5.329h1.765c1.68%200%202.81.985%202.81%202.664%200%201.68-1.13%202.665-2.81%202.665h-1.765zm14.701%202.387c3.163%200%205.492-2.138%205.492-5.052%200-2.914-2.33-5.05-5.492-5.05-3.163%200-5.492%202.136-5.492%205.05%200%202.915%202.33%205.052%205.492%205.052zm0-2.276c-1.497%200-2.669-1.097-2.669-2.776%200-1.679%201.172-2.775%202.669-2.775s2.669%201.096%202.669%202.775c0%201.68-1.172%202.776-2.67%202.776zm7.804%202.081h7.511V32.38h-4.716v-7.535h-2.795v9.713zm9.464%200h2.796v-9.714H82.63v9.714zm12.297-9.714v5.177l-4.363-5.177h-2.302v9.714h2.74v-5.176l4.362%205.176h2.302v-9.714h-2.74zm12.956%209.714h2.909l-4.377-9.714h-2.753l-4.363%209.714h2.852l.776-1.887h4.18l.776%201.887zm-4.137-3.913l1.271-3.108%201.271%203.108h-2.542zM47.914%2018.393h4.902c3.436%200%205.791-1.965%205.791-5.095s-2.355-5.094-5.79-5.094h-4.903v10.189zm2.933-2.3v-5.59h1.85c1.763%200%202.948%201.034%202.948%202.795%200%201.762-1.185%202.795-2.947%202.795h-1.851zm9.303%202.3h2.933V8.203H60.15v10.19zm11.965-2.518a3.78%203.78%200%2001-1.585.335c-1.747%200-2.932-1.194-2.932-2.912%200-1.76%201.185-2.91%202.962-2.91.992%200%201.807.363%202.518%201.135l1.866-1.66C73.922%208.655%2072.352%208%2070.412%208c-3.362%200-5.776%202.198-5.776%205.298s2.414%205.299%205.717%205.299c1.51%200%203.154-.451%204.354-1.296v-4.22h-2.592v2.794zm4.451%202.518h2.932V8.203h-2.932v10.19zm7.225%200h2.933v-7.904h3.17V8.204h-9.287v2.285h3.184v7.904zm14.435%200h3.051l-4.591-10.19h-2.889l-4.576%2010.19h2.992l.814-1.98h4.384l.815%201.98zm-4.34-4.105l1.333-3.26%201.333%203.26h-2.666zm8.222%204.105h7.879v-2.285h-4.946V8.204h-2.933v10.189zM23.204%2047.01c-.327%200-.577.223-.577.562%200%20.24.125.421.321.497l-.262.931h.59l.34-.843c.136-.322.16-.433.16-.585%200-.334-.238-.562-.572-.562z%22%20fill%3D%22%23B53CEE%22%2F%3E%3C%2Fg%3E%3Cdefs%3E%3CclipPath%20id%3D%22clip0%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M0%200h112v39H0z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3C%2Fsvg%3E") center center no-repeat;
-  background-size: 100%;
-  text-indent: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.not-fount {
-  overflow: hidden;
-  z-index: 0;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 70vh;
-  min-height: 50rem;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 8rem;
-  margin-bottom: -8rem;
-}
-.not-fount__title {
-  font-size: 4.2rem;
-  line-height: 1.19;
-  margin: 0 0 3.5rem;
-}
-@media (max-width: 649px) {
-  .not-fount__title {
-    margin-top: -35%;
-  }
-}
-.not-fount__cover {
-  position: absolute;
-  z-index: -1;
-  bottom: 0;
-  object-position: 5.5rem 5.5rem;
-}
-.not-fount__action {
-  margin: 0;
-  width: 26.9rem;
 }
 .notifications {
   position: relative;
@@ -3261,6 +3261,12 @@ i.emoji {
 .profile-card__link__active {
   color: #071013;
 }
+.profile-social__item {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 2.2rem;
+  margin: 0 0 4rem;
+}
 .profile {
   display: grid;
   grid-template-columns: 37rem 1fr;
@@ -3363,12 +3369,6 @@ i.emoji {
   line-height: 1;
   margin: 0 0 0.8rem;
   color: rgba(7, 16, 19, 0.5);
-}
-.profile-social__item {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  grid-gap: 2.2rem;
-  margin: 0 0 4rem;
 }
 .select {
   position: relative;
