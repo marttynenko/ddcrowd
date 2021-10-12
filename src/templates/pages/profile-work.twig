@@ -1,0 +1,39 @@
+{% set active_menu = 'work' %}
+
+{% extends "./profile.twig" %}
+
+{% block profile_form %}
+    <p class="profile__hint">Мы формируем сообщество IT-предпринимателей и специалистов. Для успешного нетворкинга заполните эти данные.</p>
+
+    <div class="profile__field">
+        <div class="field">
+            <div class="select">
+                <select class="js-select">
+                        <option selected value="1">VR, Стартапы</option>
+                        <option value="2">Музыка</option>
+                        <option value="3">Театр</option>
+                        <option value="3">Кино</option>
+                </select>
+                <div class="select__label">Занятие</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile__field">
+        <div class="field">
+            <div class="select">
+                <select class="js-select">
+                        <option selected value="1">Опытный предприниматель</option>
+                        <option value="2">Программист</option>
+                        <option value="3">Музыкант</option>
+                        <option value="3">Актер</option>
+                </select>
+                <div class="select__label">Профессия</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="profile__field">
+        <button class="button button_wide">Сохранить</button>
+    </div>
+{% endblock %}

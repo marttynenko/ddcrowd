@@ -1,0 +1,21 @@
+{% set head_bg = '#E8F0E4' %}
+
+{% extends "./course.twig" %}
+
+{% block course_progress %}
+    <div class="progress">
+        <div class="progress__value">10%</div>
+        <div class="progress__line">
+            <div class="progress__done progress__done_red" style="width: 10%"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block course_actions %}
+    <a class="button button_wide button_red" href="#">Продолжить обучение</a>
+    <a class="button button_wide button_transp" href="#">Подробнее о курсе</a>
+{% endblock %}
+
+{% block course_cover %}
+    <img class="course-head__cover" src="img/courses/3.png" alt="" srcset="img/courses/3.png 1x, img/courses/3@2x.png 2x">
+{% endblock %}

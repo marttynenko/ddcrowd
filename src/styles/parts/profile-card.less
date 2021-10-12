@@ -1,0 +1,57 @@
+.profile-card {
+    box-sizing: border-box;
+}
+
+.profile-card__user {
+    padding: 4rem 0;
+    background: @gray;
+    border-radius: 1.8rem 1.8rem 0 0;
+}
+
+.profile-card__avatar {
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin: 0 auto 3rem;
+}
+
+.profile-card__name {
+    .h2();
+    text-align: center;
+}
+
+.profile-card__menu {
+    padding: 1rem 0;
+    background: fade(@gray, 50%);
+    border-radius: 0 0 1.8rem 1.8rem;
+
+    @media (max-width: 1023px) {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    @media (max-width: 649px) {
+        display: none;
+    }
+}
+
+.profile-card__dropdown {
+    @media (min-width: 650px) {
+        display: none;
+    }
+}
+
+.profile-card__link {
+    .h3();
+    display: block;
+    line-height: 6rem;
+    text-decoration: none;
+    text-align: center;
+    color: @violete;
+}
+
+.profile-card__link__active {
+    color: @black;
+}

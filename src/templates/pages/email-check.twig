@@ -1,0 +1,15 @@
+{% extends "../parts/layout.twig" %}
+
+{% block header %}
+    {% embed "../parts/header-auth.twig" %}{% endembed %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="email-check">
+            <img class="email-check__cover" src="img/email-check.png" srcset="img/email-check@2x.png 2x" alt="">
+            <h1 class="email-check__title">Проверка электронной почты</h1>
+            <p class="email-check__text">Прежде чем продолжить, проверьте свою электронную почту на наличие ссылки для подтверждения. Если вы не получили письмо, <a href="#">запросите его снова.</a></p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,63 @@
+.stats {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    color: @black;
+
+    @media (max-width: 1023px) {
+        padding: 4rem;
+        width: 64rem;
+        box-sizing: border-box;
+    }
+
+    @media (max-width: 649px) {
+        padding: 4rem 3rem;
+        width: calc(100vw - 10px);
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-flow: initial;
+        grid-row-gap: 4rem;
+    }
+
+    @media (max-width: 320px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.stat__icon {
+    width: 3.6rem;
+    height: 3.6rem;
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 0 0 1rem;
+}
+
+.stat__icon_course {
+    background-image: data-uri('../img/stats/course.svg');
+}
+
+.stat__icon_tasks {
+    background-image: data-uri('../img/stats/tasks.svg');
+}
+
+.stat__icon_duration {
+    background-image: data-uri('../img/stats/duration.svg');
+}
+
+.stat__icon_date {
+    background-image: data-uri('../img/stats/date.svg');
+}
+
+.stat__icon_access {
+    background-image: data-uri('../img/stats/access.svg');
+}
+
+.stat__value {
+    margin: 0 0 0.4rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.stat__label {
+    color: fade(@black, 50%);
+}

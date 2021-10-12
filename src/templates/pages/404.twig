@@ -1,0 +1,13 @@
+{% extends "../parts/layout.twig" %}
+
+{% block header %}
+    {% embed "../parts/header-auth.twig" %}{% endembed %}
+{% endblock %}
+
+{% block content %}
+    <div class="not-fount">
+        <h1 class="not-fount__title">Тут ничего нет :(</h1>
+        <p class="not-fount__action"><a class="button button_wide">Перейти на главную</a></p>
+        <img class="not-fount__cover" src="img/not-fount.png" srcset="img/not-found@2x.png 2x" alt="">
+    </div>
+{% endblock %}

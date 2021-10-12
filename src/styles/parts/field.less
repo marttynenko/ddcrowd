@@ -1,0 +1,50 @@
+.field {
+    margin: 0 0 1rem;
+}
+
+.field_indent {
+    margin: 3.2rem 0;
+}
+
+.field__msg {
+    .h3();
+    position: relative;
+    margin: 3rem -3rem 3rem -3rem;
+    padding: 0.7rem 3rem 0.7rem 6.5rem;
+    color: #fff;
+
+    &::before {
+        position: absolute;
+        left: 3rem;
+        top: 50%;
+        margin-top: -1.2rem;
+        content: '';
+        width: 2.4rem;
+        height: 2.4rem;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+.field__msg_error {
+    background: @red;
+
+    &::before {
+        background-image: data-uri('../img/error.svg');
+    }
+}
+
+.field__msg_sucess {
+    background: @greenDark;
+
+    &::before {
+        background-image: data-uri('../img/success.svg');
+    }
+}
+
+.field__hint {
+    margin: 2rem 0 0;
+    color: fade(@black, 50%);
+    padding: 0 0 0 2rem;
+}

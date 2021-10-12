@@ -1,0 +1,77 @@
+.button {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 1.25rem 2rem;
+    line-height: 1;
+    border-radius: 4.8rem;
+    text-decoration: none;
+    border: none;
+    font-size: 1.8rem;
+    background: @violete;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.1s ease;
+    text-align: center;
+
+    &:hover {
+        color: #fff;
+        background: @violeteLight;
+    }
+
+    &_block {
+        width: 100%;
+        display: block;
+    }
+    &_paddings {
+        padding-left: 45px;
+        padding-right: 45px;
+    }
+}
+
+.button_yellow {
+    background: @yellow;
+    color: @black;
+
+    &:hover {
+        background: @yellowLight;
+        color: @black;
+    }
+}
+
+.button_red {
+    background: @red;
+    color: #fff;
+
+    &:hover {
+        background: fade(@red, 70%);
+    }
+}
+
+.button_transp {
+    background: transparent;
+    color: @violete;
+    box-shadow: inset 0 0 0 1px @violete;
+
+    &:hover {
+        background: transparent;
+    }
+}
+
+.button_transp-red {
+    background: transparent;
+    color: @red;
+    box-shadow: inset 0 0 0 1px @red;
+
+    &:hover {
+        background: transparent;
+    }
+}
+
+.button_small {
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+}
+
+.button_wide {
+    width: 100%;
+}

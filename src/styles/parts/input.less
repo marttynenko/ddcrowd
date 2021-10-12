@@ -1,0 +1,96 @@
+.input {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: @gray;
+    border-radius: 2.4rem;
+    transition: background 0.2s ease;
+
+    &.focus {
+        background: #FFEFC3;
+    }
+}
+
+.input__ctrl {
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    padding: 1.5rem 2rem 0;
+    height: 5rem;
+    font-size: 1.8rem;
+    outline: none;
+    color: @black;
+    background: transparent;
+
+    &:disabled {
+        color: fade(@black, 50%);
+    }
+}
+.input__ui {
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    padding: 0 2rem;
+    height: 5rem;
+    font-size: 1.8rem;
+    outline: none;
+    color: @black;
+    background: #F1F0F2;
+    border-radius: 2.4rem;
+
+    &:disabled {
+        color: fade(@black, 50%);
+    }
+}
+
+.input.active .input__label,
+.input__ctrl:focus + .input__label {
+    font-size: 1.3rem;
+    transform: translateY(-1.2rem);
+}
+
+.input__label {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    right: 2rem;
+    height: 5rem;
+    line-height: 5rem;
+    margin-top: -2.5rem;
+    font-size: 1.8rem;
+    color: fade(@black, 50%);
+    pointer-events: none;
+    transition: font-size 0.1s ease, transform 0.1s ease;
+}
+
+.input__hint {
+    .p();
+    white-space: nowrap;
+    padding: 0 3rem 0 0;
+    color: fade(@violete, 50%);
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.input_error {
+    background: fade(@red, 15%);
+
+    .input__label {
+        color: @red;
+    }
+}
+
+.input_success {
+    background: fade(@greenDark, 15%);
+
+    .input__label {
+        color: @greenDark;
+    }
+}
+
+.input__margin {
+    margin-bottom: 15px;
+}

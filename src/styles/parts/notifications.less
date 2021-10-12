@@ -1,0 +1,117 @@
+.notifications {
+    position: relative;
+    margin: 0 1.5rem 0 0;
+
+    &.active {
+        .notifications__list {
+            opacity: 1;
+            pointer-events: initial;
+        }
+    }
+
+    @media (max-width: 649px) {
+        position: static;
+    }
+}
+
+.notifications__toggler {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    background: #F1F0F2;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        width: 2rem;
+        height: 2rem;
+        background: data-uri('../img/notification-toggler.svg') center center no-repeat;
+        background-size: 100%;
+    }
+}
+
+.notifications__counter {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: -1rem;
+    margin-top: -0.3rem;
+    padding: 0 0.53rem;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    border-radius: 2rem;
+    background: #FF5E5B;
+    color: #fff;
+}
+
+.notifications__list {
+    display: none;
+}
+
+.notification {
+    position: relative;
+    padding: 2rem 4rem 2rem 2rem;
+    display: grid;
+    grid-template-areas: "pic text" "pic action";
+    grid-gap: 1rem 1.5rem;
+    border-bottom: 2px solid #F1F0F2;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.notification__text {
+    grid-area: text;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    color: fade(#071013, 50);
+}
+
+.notification__action {
+    grid-area: action;
+    font-size: 1.5rem;
+    color: #713DF2;
+
+    a {
+        text-decoration: none;
+        color: #713DF2;
+    }
+}
+
+.notification__pic {
+    grid-area: pic;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.notification__pic_red {
+    background: #FF5E5B;
+}
+
+.notification__pic_blue {
+    background: #B9E6FF;
+}
+
+.notification__pic_yellow {
+    background: #FECF4D;
+}
+
+.notification__close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: data-uri('../img/notification-close.svg') center center no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+}

@@ -1,0 +1,29 @@
+.tabs {
+    border-bottom: 2px solid @gray;
+
+    @media (max-width: 649px) {
+        display: grid;
+        grid-auto-flow: column;
+    }
+}
+
+.tabs__item {
+    .h3();
+    display: inline-block;
+    line-height: 6rem;
+    text-decoration: none;
+    color: @violete;
+    min-width: 32rem;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+
+    @media (max-width: 649px) {
+        min-width: initial;
+    }
+}
+
+.tabs__item_active {
+    border-bottom-color: @black;
+    color: @black;
+}

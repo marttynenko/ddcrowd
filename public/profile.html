@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Dolina</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+
+    <div class="root">
+        <header class="header">
+            <div class="header__section header__section_main">
+                <a href="#">
+                    <span class="logo">Digital Dolina</span>
+                </a>
+            </div>
+            <div class="header__section header__section_side">
+                <button class="button button_yellow button_small">Войти</button>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="profile">
+                <div class="profile__main">
+                    <div class="profile-card">
+                        <div class="profile-card__user">
+                            <img class="profile-card__avatar" src="https://miro.medium.com/fit/c/262/262/1*puV9IW8iZY2Hmci_uoqHeA@2x.jpeg" alt="">
+                            <div class="profile-card__name">Станислав Константинопольский</div>
+                        </div>
+
+
+                        <div class="profile-card__menu">
+                            <a href="#" class="profile-card__link profile-card__link__active">О себе</a>
+                            <a href="#" class="profile-card__link ">Деятельность</a>
+                            <a href="#" class="profile-card__link ">Пароль</a>
+                            <a href="#" class="profile-card__link ">Соцсети</a>
+                        </div>
+
+                        <div class="profile-card__dropdown">
+                            <div class="dropdown dropdown_user-menu js-dropdown">
+                                <div class="dropdown__title js-dropdown-toggler">О себе</div>
+                                <div class="dropdown__list js-dropdown-content">
+                                    <div class="dropdown__item js-dropdown-item">Деятельность</div>
+                                    <div class="dropdown__item js-dropdown-item">Пароль</div>
+                                    <div class="dropdown__item js-dropdown-item">Соцсети</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile__side">
+                    <div class="profile-notifications">
+                        <div class="profile-notifications__item profile-notifications__item_fail">
+                            Всплывающее сообщение, данные не сохранены
+
+                            <div class="profile-notifications__close"></div>
+                        </div>
+                        <div class="profile-notifications__item profile-notifications__item_success">
+                            Всплывающее сообщение, данные сохранены
+
+                            <div class="profile-notifications__close"></div>
+                        </div>
+                    </div>
+
+                    <div class="profile__field">
+                        <div class="field">
+                            <div class="input js-input">
+                                <input type="text" class="input__ctrl" value="Станислав" disabled />
+
+                                <label class="input__label">Имя</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile__field">
+                        <div class="field">
+                            <div class="input js-input">
+                                <input type="text" class="input__ctrl" value="Константинопольский" disabled />
+
+                                <label class="input__label">Фамилия</label>
+                            </div>
+
+                            <div class="field__hint">Для смены ФИО напишите в техподдржку</div>
+                        </div>
+                    </div>
+
+                    <div class="profile__field profile__field_avatar">
+                        <div class="avatar-upload">
+                            <img class="avatar-upload__avatar" src="https://miro.medium.com/fit/c/262/262/1*puV9IW8iZY2Hmci_uoqHeA@2x.jpeg" alt="">
+                            <button class="button button_transp">Загрузить фото</button>
+                            <button class="button button_transp">Сделать снимок</button>
+                        </div>
+                    </div>
+
+                    <div class="profile__field">
+                        <div class="field">
+                            <div class="input js-input">
+                                <input type="text" class="input__ctrl" value="+7 918 192 87 12" />
+
+                                <label class="input__label">Телефон</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile__field">
+                        <div class="field">
+                            <div class="input js-input">
+                                <input type="email" class="input__ctrl" value="test@yandex.ru" />
+
+                                <label class="input__label">Почта</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile__field">
+                        <div class="field">
+                            <div class="input js-input">
+                                <input type="text" class="input__ctrl" value="01.01.1992" />
+
+                                <label class="input__label">Дата рождения</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile__field">
+                        <div class="field">
+                            <div class="input js-input">
+                                <input type="text" class="input__ctrl" value="Москва" />
+
+                                <label class="input__label">Город</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile__field">
+                        <div class="field">
+                            <div class="select">
+                                <select class="js-select">
+                                    <option selected value="Мужской">Мужской</option>
+                                    <option value="Женский">Женский</option>
+                                </select>
+                                <div class="select__label">Пол</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile__field">
+                        <button class="button button_wide">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <footer class="footer">
+                <div class="footer__left">
+                    @ Digital Dolina 2021<br />
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+                <div class="footer__right">
+                    <div class="footer__icon footer__icon_tg"></div>
+                    <div class="footer__icon footer__icon_wp"></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js" defer></script>
+    <script src="https://unpkg.com/@popperjs/core@2" defer></script>
+    <script src="https://unpkg.com/tippy.js@6" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+
+</body>
+
+</html>

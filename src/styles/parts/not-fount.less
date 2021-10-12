@@ -1,0 +1,35 @@
+.not-fount {
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    min-height: 50rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 8rem;
+    margin-bottom: -8rem;
+}
+
+.not-fount__title {
+    .h1();
+    margin: 0 0 3.5rem;
+
+    @media (max-width: 649px) {
+        margin-top: -35%;
+    }
+}
+
+.not-fount__cover {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    object-position: 5.5rem 5.5rem;
+}
+
+.not-fount__action {
+    margin: 0;
+    width: 26.9rem;
+}

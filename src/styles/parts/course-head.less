@@ -1,0 +1,97 @@
+.course-head {
+    position: relative;
+    z-index: 0;
+    margin: 0 0 5rem;
+    position: relative;
+    padding: 8rem 0;
+    background: #E9F1F5;
+
+    @media (max-width: 649px) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+.course-head__title {
+    .h1();
+    margin: 0 0 4rem;
+
+    @media (max-width: 649px) {
+        .h1-mobile();
+    }
+}
+
+.course-head__status {
+    margin: 0 0 4.5rem;
+
+    @media (max-width: 649px) {
+        margin-bottom: 2.5rem;
+    }
+}
+
+.course-head__stats {
+    margin: 0 0 6rem;
+
+    @media (max-width: 1023px) {
+        display: none;
+    }
+}
+
+.course-head__actions {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 3rem;
+    grid-row-gap: 2rem;
+
+    @media (max-width: 1023px) {
+        grid-auto-flow: row;
+    }
+}
+
+.course-head__cover {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+
+    @media (max-width: 1023px) {
+        width: 55.8rem;
+    }
+
+    @media (max-width: 649px) {
+        position: static;
+        display: block;
+        width: 100%;
+        margin: 0 0 2rem;
+    }
+}
+
+.course-head__content {
+    padding: 0 57rem 0 0;
+
+    @media (max-width: 1023px) {
+        padding: 0;
+        width: 37rem;
+    }
+
+    @media (max-width: 649px) {
+        width: 100%;
+    }
+}
+
+.course-head__info-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -1.2rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+    background: data-uri('../img/info.svg') center center no-repeat;
+    background-size: 100%;
+
+    @media (min-width: 1024px) {
+        display: none;
+    }
+}

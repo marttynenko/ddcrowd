@@ -1,0 +1,26 @@
+{% extends "./index.twig" %}
+
+{% block outside %}
+    <div class="popup">
+        <div class="popup__content">
+            <div class="form">
+                <div class="form__heading">
+                    <h3 class="form__title">Не помните пароль?</h3>
+                    <div class="popup__close"></div>
+                </div>
+
+                <div class="form__content">
+                    <div class="field">
+                        <div class="input js-input">
+                            <input type="email" class="input__ctrl" />
+
+                            <label class="input__label">Ваша почта</label>
+                        </div>
+                    </div>
+
+                    <button class="button button_wide" type="submit">Сбросить пароль</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

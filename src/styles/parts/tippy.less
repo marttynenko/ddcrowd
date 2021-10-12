@@ -1,0 +1,71 @@
+.tippy-box[data-theme~='site'],
+.tippy-box[data-theme~='notifications'] {
+    background-color: #fff;
+    border-radius: 1.8rem;
+
+    .tippy-content {
+        padding: 0;
+    }
+
+    .tippy-arrow {
+        color: #fff;
+    }
+
+    @media (max-width: 649px) {
+        width: 100%;
+    }
+
+    .tippy-arrow {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .tippy-arrow:before {
+        width: 3rem;
+        height: 3rem;
+        background: #fff;
+        border: none;
+        border-radius: 0.5rem;
+        transform: rotate(45deg);
+    }
+
+    &[data-placement^=top] {
+        margin-bottom: 1rem;
+
+        > .tippy-arrow {
+            &:before {
+                left: 1.1rem;
+                bottom: -1.5rem;
+            }
+        }
+    }
+
+    &[data-placement^=bottom] {
+        margin-top: 2rem;
+
+        > .tippy-arrow {
+            &:before {
+                left: -1.1rem;
+                top: -1.5rem;
+            }
+        }
+    }
+}
+
+.tippy-box[data-theme~='notifications'] {
+    border-radius: 1.8rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    width: 38rem;
+
+    @media (max-width: 400px) {
+        width: 30rem;
+    }
+
+    &[data-placement^=bottom] {
+        margin-top: 0;
+    }
+}
+
+.tippy-box[data-theme~='disabled-course'] {
+    border-radius: 10rem;
+}

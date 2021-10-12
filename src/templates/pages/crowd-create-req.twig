@@ -1,0 +1,175 @@
+{% extends "../parts/layout.crowd.twig" %}
+
+{% block content %}
+
+  <!--box-sizing-fix-->
+  <div class="bxsz-fix">
+    <div class="container">
+      <div class="create-req">
+        <div class="row">
+          <div class="col-md-9">
+
+            <form id="req_form">
+            <div class="create-req-field">
+              <div class="create-req-title">Название</div>
+              <div class="input js-input">
+                <input name="req_title" id="req_title" type="text" class="input__ctrl">
+                <label for="req_title" class="input__label">Краткое название запроса</label>
+              </div>
+            </div>
+
+            <div class="create-req-field">
+              <div class="create-req-title">Описание проекта</div>
+              <div class="visual-esitor-wrap">
+                <textarea name="req_descr" id="req_descr" rows="10" placeholder="Опишите ситуацию и свой проект" class="visual-editor"></textarea>
+              </div>
+              <div class="create-req-upload">
+                <div class="ui-file-wrap">
+                  <label for="req_file" class="ui-file">
+                    <input class="ui-file-file" type="file" name="req_file" id="req_file" multiple>
+                    <span class="ui-file-txt">Прикрепите файл</span>
+                  </label>
+                  <div class="ui-file-previews"></div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="create-req-field create-req-tags">
+              <div class="row">
+                <div class="col-req-themes">
+                  <div class="create-req-tags-title">Выбери теги темы запроса:</div>
+                  <div class="create-req-tags-list">
+                  <label for="crowd_themes_1" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-theme" name="crowd_themes_1" id="crowd_themes_1">
+                    <span class="iconed-sticker-txt"><i class="emoji">🚀</i>Гипотезы роста</span>
+                  </label>
+                  <label for="crowd_themes_2" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-theme" name="crowd_themes_2" id="crowd_themes_2">
+                    <span class="iconed-sticker-txt"><i class="emoji">🏫</i>EdTech</span>
+                  </label>
+                  <label for="crowd_themes_3" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-theme" name="crowd_themes_3" id="crowd_themes_3">
+                    <span class="iconed-sticker-txt"><i class="emoji">☁️</i>SaaS</span>
+                  </label>
+                  <label for="crowd_themes_4" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-theme" name="crowd_themes_4" id="crowd_themes_4">
+                    <span class="iconed-sticker-txt"><i class="emoji">📣</i>Питч проекта</span>
+                  </label>
+                  <label for="crowd_themes_5" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-theme" name="crowd_themes_5" id="crowd_themes_5">
+                    <span class="iconed-sticker-txt"><i class="emoji">🚫</i>Ограничения</span>
+                  </label>
+                  <label for="crowd_themes_6" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-theme" name="crowd_themes_6" id="crowd_themes_6">
+                    <span class="iconed-sticker-txt"><i class="emoji">👩‍</i>Mental Health</span>
+                  </label>
+                  <label for="crowd_themes_7" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-theme" name="crowd_themes_7" id="crowd_themes_7">
+                    <span class="iconed-sticker-txt"><i class="emoji">📈</i>Маркетинг</span>
+                  </label>
+                  <label for="crowd_themes_8" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-theme" name="crowd_themes_8" id="crowd_themes_8">
+                    <span class="iconed-sticker-txt"><i class="emoji">💸</i>Привлечение инвестиций</span>
+                  </label>
+                  <label for="crowd_themes_9" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-theme" name="crowd_themes_9" id="crowd_themes_9">
+                    <span class="iconed-sticker-txt"><i class="emoji">👫</i>Управление командой</span>  
+                  </label>
+                  <label for="crowd_themes_10" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-theme" name="crowd_themes_10" id="crowd_themes_10">
+                    <span class="iconed-sticker-txt"><i class="emoji">🔮</i>‍Продукт</span>
+                  </label>
+                  </div>
+                  <a href="javascript:void(0)" class="create-req-tags-uncheck tags-uncheck" data-group=".group-req-theme">Снять выбор</a>
+                </div>
+                <div class="col-req-directions">
+                  <div class="create-req-tags-title">Выбери теги темы запроса:</div>
+                  <div class="create-req-tags-list">
+                  <label for="crowd_directions_1" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-direction" name="crowd_directions_1" id="crowd_directions_1">
+                    <span class="iconed-sticker-txt"><i class="emoji">🚀</i>Гипотезы роста</span>
+                  </label>
+                  <label for="crowd_directions_2" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-direction" name="crowd_directions_2" id="crowd_directions_2">
+                    <span class="iconed-sticker-txt"><i class="emoji">🏫</i>EdTech</span>
+                  </label>
+                  <label for="crowd_directions_3" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-direction" name="crowd_directions_3" id="crowd_directions_3">
+                    <span class="iconed-sticker-txt"><i class="emoji">☁️</i>SaaS</span>
+                  </label>
+                  <label for="crowd_directions_4" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-direction" name="crowd_directions_4" id="crowd_directions_4">
+                    <span class="iconed-sticker-txt"><i class="emoji">📣</i>Питч проекта</span>
+                  </label>
+                  <label for="crowd_directions_5" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-direction" name="crowd_directions_5" id="crowd_directions_5">
+                    <span class="iconed-sticker-txt"><i class="emoji">🚫</i>Ограничения</span>
+                  </label>
+                  <label for="crowd_directions_6" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-direction" name="crowd_directions_6" id="crowd_directions_6">
+                    <span class="iconed-sticker-txt"><i class="emoji">👩‍</i>Mental Health</span>
+                  </label>
+                  <label for="crowd_directions_7" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-direction" name="crowd_directions_7" id="crowd_directions_7">
+                    <span class="iconed-sticker-txt"><i class="emoji">📈</i>Маркетинг</span>
+                  </label>
+                  <label for="crowd_directions_8" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-direction" name="crowd_directions_8" id="crowd_directions_8">
+                    <span class="iconed-sticker-txt"><i class="emoji">💸</i>Привлечение инвестиций</span>
+                  </label>
+                  <label for="crowd_directions_9" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-direction" name="crowd_directions_9" id="crowd_directions_9">
+                    <span class="iconed-sticker-txt"><i class="emoji">👫</i>Управление командой</span>  
+                  </label>
+                  <label for="crowd_directions_10" class="iconed-sticker">
+                    <input type="checkbox" class="group-req-direction" name="crowd_directions_10" id="crowd_directions_10">
+                    <span class="iconed-sticker-txt"><i class="emoji">🔮</i>‍Продукт</span>
+                  </label>
+                  </div>
+                  <a href="javascript:void(0)" class="create-req-tags-uncheck tags-uncheck" data-group=".group-req-direction">Снять выбор</a>
+                </div>
+              </div><!--.row-->
+            </div><!--.field-->
+
+            <div class="create-req-field">
+              <div class="create-req-title">Добавь вопросы, на которые ты хотел бы получить ответы </div>
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="input js-input input__margin">
+                    <input name="req_question" id="req_question" type="text" class="input__ctrl">
+                    <label for="req_question" class="input__label">Вопрос №1</label>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <a href="javascript:void(0)" class="create-req-add-question" data-target="#create-req-additonal-questions">+ Добавить вопрос</a>
+                </div>
+              </div>
+              <div id="create-req-additonal-questions"></div>
+            </div>
+
+
+            <div class="create-req-field">
+              <div class="create-req-title">Запрос актуален до</div>
+              <div class="row valign-center">
+                <div class="col-req-date">
+                  <input type="date" id="create-req-date" class="input__ui">
+                </div>
+                <div class="col-req-or">или</div>
+                <div class="col-req-noterm"><a href="#" class="create-req-noterm" data-target="#create-req-date">Бессрочный запрос</a></div>
+              </div>
+            </div>
+
+            <div class="create-req-submit">
+            <button type="submit" class="button">Создать запрос</button>
+            </div>
+            </form>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

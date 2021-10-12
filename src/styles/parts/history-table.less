@@ -1,0 +1,41 @@
+.history-table-wrapper {
+    overflow: auto;
+}
+
+.history-table {
+    .h3();
+    width: 100%;
+    border-collapse: collapse;
+
+    td {
+        padding: 2rem 1rem;
+        border-bottom: 2px solid @gray;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+.history-table__main {
+    width: 45%;
+}
+
+.history-table__price,
+.history-table__name,
+.history-table__date {
+    color: fade(@black, 50%);
+    text-align: right;
+    white-space: nowrap;
+}
+
+.history-table__date,
+.history-table__name {
+    @media (max-width: 1023px) {
+        display: none;
+    }
+}

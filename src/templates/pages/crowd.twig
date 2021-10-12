@@ -1,0 +1,302 @@
+{% extends "../parts/layout.crowd.twig" %}
+
+{% block content %}
+
+  <!--box-sizing-fix-->
+  <div class="bxsz-fix">
+    <div class="crowd-promo">
+      <div class="container">
+        <div class="crowd-promo-row">
+          <div class="crowd-promo-content">
+            <div class="crowd-promo-title">Краудсорсинговая платформа</div>
+            <div class="crowd-promo-aftertitle">Используй интеллект сообщества для решения своих реальных бизнес-задач и проблем.</div>
+            <p>Помогая другим — ты развиваешь насмотренность и навык.Получая помощь — ты смотришь на ситуацию под новым углом,видишь новые способы решений своей задачи.</p>
+          </div>
+          <div class="crowd-promo-img">
+            <img src="./img/crowd/crowd-promo.png" srcset="./img/crowd/crowd-promo@2x.png" alt="Краудсорсинговая платформа">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="crowd-tabs">
+        <a href="#" class="crowd-tabs-item active">Все</a>
+        <a href="#" class="crowd-tabs-item">Актуальные запросы</a>
+        <a href="#" class="crowd-tabs-item">Архивные</a>
+        <a href="#" class="crowd-tabs-item">Мои запросы</a>
+        <a href="#" class="crowd-tabs-item">Мои ответы</a>
+      </div>
+
+      <div class="crowd-search">
+        <div class="row">
+          <div class="col-crowd-params col-md-9">
+            <div class="crowd-search-line">
+              <div class="row valign-center">
+                <div class="col-crowd-search">
+                  <div class="input js-input">
+                    <input name="crowd_search" id="crowd_search" type="text" class="input__ctrl">
+                    <label for="crowd_search" class="input__label">Поиск</label>
+                  </div>
+                </div>
+
+                <div class="col-crowd-theme">
+                  <div class="crowd-search-toggler" data-target="#crowd-search-themes">Выбрать тему</div>
+                </div>
+
+                <div class="col-crowd-direction">
+                  <div class="crowd-search-toggler" data-target="#crowd-search-directions">Выбрать направление</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="crowd-search-tags">
+              <div id="crowd-search-themes" class="crowd-search-tagslist">
+                <label for="crowd_themes_1" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-themes-checkbox" name="crowd_themes_1" id="crowd_themes_1">
+                  <span class="iconed-sticker-txt"><i class="emoji">🚀</i> Гипотезы роста</span>
+                </label>
+                <label for="crowd_themes_2" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-themes-checkbox" name="crowd_themes_2" id="crowd_themes_2">
+                  <span class="iconed-sticker-txt"><i class="emoji">🏫</i> EdTech</span>
+                </label>
+                <label for="crowd_themes_3" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-themes-checkbox" name="crowd_themes_3" id="crowd_themes_3">
+                  <span class="iconed-sticker-txt"><i class="emoji">☁️</i> SaaS</span>
+                </label>
+                <label for="crowd_themes_4" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-themes-checkbox" name="crowd_themes_4" id="crowd_themes_4">
+                  <span class="iconed-sticker-txt"><i class="emoji">📣</i> Питч проекта</span>
+                </label>
+                <label for="crowd_themes_5" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-themes-checkbox" name="crowd_themes_5" id="crowd_themes_5">
+                  <span class="iconed-sticker-txt"><i class="emoji">🚫</i> Ограничения</span>
+                </label>
+                <label for="crowd_themes_6" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-themes-checkbox" name="crowd_themes_6" id="crowd_themes_6">
+                  <span class="iconed-sticker-txt"><i class="emoji">👩‍</i> Mental Health</span>
+                </label>
+                <label for="crowd_themes_7" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-themes-checkbox" name="crowd_themes_7" id="crowd_themes_7">
+                  <span class="iconed-sticker-txt"><i class="emoji">📈</i> Маркетинг</span>
+                </label>
+                <label for="crowd_themes_8" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-themes-checkbox" name="crowd_themes_8" id="crowd_themes_8">
+                  <span class="iconed-sticker-txt"><i class="emoji">💸</i> Привлечение инвестиций</span>
+                </label>
+                <label for="crowd_themes_9" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-themes-checkbox" name="crowd_themes_9" id="crowd_themes_9">
+                  <span class="iconed-sticker-txt"><i class="emoji">👫</i> Управление командой</span>  
+                </label>
+                <label for="crowd_themes_10" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-themes-checkbox" name="crowd_themes_10" id="crowd_themes_10">
+                  <span class="iconed-sticker-txt"><i class="emoji">🔮</i>‍ Продукт</span>
+                </label>
+                <a href="#" data-group=".crowd-themes-checkbox" class="tags-uncheck crowd-search-uncheck">Снять выбор</a>
+              </div>
+              <div id="crowd-search-directions" class="crowd-search-tagslist">
+                <label for="crowd_directions_1" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-directions-checkbox" name="crowd_directions_1" id="crowd_directions_1">
+                  <span class="iconed-sticker-txt"><i class="emoji">🚀</i> Гипотезы роста</span>
+                </label>
+                <label for="crowd_directions_2" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-directions-checkbox" name="crowd_directions_2" id="crowd_directions_2">
+                  <span class="iconed-sticker-txt"><i class="emoji">🏫</i> EdTech</span>
+                </label>
+                <label for="crowd_directions_3" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-directions-checkbox" name="crowd_directions_3" id="crowd_directions_3">
+                  <span class="iconed-sticker-txt"><i class="emoji">☁️</i> SaaS</span>
+                </label>
+                <label for="crowd_directions_4" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-directions-checkbox" name="crowd_directions_4" id="crowd_directions_4">
+                  <span class="iconed-sticker-txt"><i class="emoji">📣</i> Питч проекта</span>
+                </label>
+                <label for="crowd_directions_5" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-directions-checkbox" name="crowd_directions_5" id="crowd_directions_5">
+                  <span class="iconed-sticker-txt"><i class="emoji">🚫</i> Ограничения</span>
+                </label>
+                <label for="crowd_directions_6" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-directions-checkbox" name="crowd_directions_6" id="crowd_directions_6">
+                  <span class="iconed-sticker-txt"><i class="emoji">👩‍</i> Mental Health</span>
+                </label>
+                <label for="crowd_directions_7" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-directions-checkbox" name="crowd_directions_7" id="crowd_directions_7">
+                  <span class="iconed-sticker-txt"><i class="emoji">📈</i> Маркетинг</span>
+                </label>
+                <label for="crowd_directions_8" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-directions-checkbox" name="crowd_directions_8" id="crowd_directions_8">
+                  <span class="iconed-sticker-txt"><i class="emoji">💸</i> Привлечение инвестиций</span>
+                </label>
+                <label for="crowd_directions_9" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-directions-checkbox" name="crowd_directions_9" id="crowd_directions_9">
+                  <span class="iconed-sticker-txt"><i class="emoji">👫</i> Управление командой</span>  
+                </label>
+                <label for="crowd_directions_10" class="iconed-sticker">
+                  <input type="checkbox" class="crowd-directions-checkbox" name="crowd_directions_10" id="crowd_directions_10">
+                  <span class="iconed-sticker-txt"><i class="emoji">🔮</i>‍ Продукт</span>
+                </label>
+                <a href="#" data-group=".crowd-directions-checkbox" class="tags-uncheck crowd-search-uncheck">Снять выбор</a>
+              </div>
+            </div><!--.tags-->
+          </div>
+
+          <div class="col-crowd-btn col-md-3">
+            <a href="#" class="button button_block">Создать запрос</a>
+          </div>
+        </div>
+      </div><!--.search-->
+
+
+      <div class="crowd-cols">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="crowd-req-list">
+              <div class="crowd-req">
+                <div class="crowd-req-body">
+                  <div class="crowd-req-head">
+                    <div class="crowd-req-author">
+                      <div class="crowd-req-author-ava"><img src="./img/crowd/crowd-ava.png" srcset="./img/crowd/crowd-ava@2x.png 2x" alt="Станислав К."></div>
+                      <div class="crowd-req-author-names">
+                        <div class="crowd-req-author-name">Станислав К.</div>
+                        <div class="crowd-req-author-pos">Основатель проекта Greatsteve</div>
+                      </div>
+                    </div>
+
+                    <div class="crowd-req-date">
+                      <div class="crowd-req-date-label">Актуально до</div>
+                      <div class="crowd-req-date-date">25 октября</div>
+                    </div>
+                  </div><!--.head-->
+
+                  <div class="crowd-req-descr">
+                    <div class="crowd-req-title">Запрос на ревью Питч-презентации</div>
+                    <div class="crowd-req-txt">Всем привет! Сделал питч презентацию, но ещё шлифуем, но уже немного запутались. Нужна помощь. Коротко про мою идею: ПОследний год активно развиваю проект 2yachts.com — совемещаем две компетенции: маркетплейс + vip брокер. Занимаемся продажей и арендой яхт (за прошлый год 4500 лидов)</div>
+                  </div>
+
+                  <div class="crowd-req-labels">
+                    <a href="#" class="iconed-sticker crowd-req-label"><i class="emoji">📣</i> Питч проекта</a>
+                    <a href="#" class="iconed-sticker crowd-req-label"><i class="emoji">👜️</i> Маркетплейсы</a>
+                    <a href="#" class="iconed-sticker crowd-req-label"><i class="emoji">🎞️</i> Презентации</a>
+                  </div>
+                </div>
+
+                <div class="crowd-req-actions">
+                  <div class="crowd-req-btn">
+                    <a href="#" class="button button_block button_yellow">Запрос</a>
+                  </div>
+                  <div class="crowd-req-stat">
+                    <div>0 ответов</div>
+                    <div>35 просмотров</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="crowd-req">
+                <div class="crowd-req-body">
+                  <div class="crowd-req-head">
+                    <div class="crowd-req-author">
+                      <div class="crowd-req-author-ava"><img src="./img/crowd/crowd-ava.png" srcset="./img/crowd/crowd-ava@2x.png 2x" alt="Станислав К."></div>
+                      <div class="crowd-req-author-names">
+                        <div class="crowd-req-author-name">Станислав К.</div>
+                        <div class="crowd-req-author-pos">Основатель проекта Greatsteve</div>
+                      </div>
+                    </div>
+
+                    <div class="crowd-req-date">
+                      <div class="crowd-req-date-label">Актуально до</div>
+                      <div class="crowd-req-date-date">25 октября</div>
+                    </div>
+                  </div><!--.head-->
+
+                  <div class="crowd-req-descr">
+                    <div class="crowd-req-title">Запрос на ревью Питч-презентации</div>
+                    <div class="crowd-req-txt">Всем привет! Сделал питч презентацию, но ещё шлифуем, но уже немного запутались. Нужна помощь. Коротко про мою идею: ПОследний год активно развиваю проект 2yachts.com — совемещаем две компетенции: маркетплейс + vip брокер. Занимаемся продажей и арендой яхт (за прошлый год 4500 лидов)</div>
+                  </div>
+
+                  <div class="crowd-req-labels">
+                    <a href="#" class="iconed-sticker crowd-req-label"><i class="emoji">📣</i> Питч проекта</a>
+                    <a href="#" class="iconed-sticker crowd-req-label"><i class="emoji">👜️</i> Маркетплейсы</a>
+                    <a href="#" class="iconed-sticker crowd-req-label"><i class="emoji">🎞️</i> Презентации</a>
+                  </div>
+                </div>
+
+                <div class="crowd-req-actions">
+                  <div class="crowd-req-btn">
+                    <a href="#" class="button button_block">Кейс DD</a>
+                  </div>
+                  <div class="crowd-req-stat">
+                    <div>0 ответов</div>
+                    <div>35 просмотров</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="crowd-req">
+                <div class="crowd-req-body">
+                  <div class="crowd-req-head">
+                    <div class="crowd-req-author">
+                      <div class="crowd-req-author-ava"><img src="./img/crowd/crowd-ava.png" srcset="./img/crowd/crowd-ava@2x.png 2x" alt="Станислав К."></div>
+                      <div class="crowd-req-author-names">
+                        <div class="crowd-req-author-name">Станислав К.</div>
+                        <div class="crowd-req-author-pos">Основатель проекта Greatsteve</div>
+                      </div>
+                    </div>
+
+                    <div class="crowd-req-date">
+                      <div class="crowd-req-date-label">Актуально до</div>
+                      <div class="crowd-req-date-date">25 октября</div>
+                    </div>
+                  </div><!--.head-->
+
+                  <div class="crowd-req-descr">
+                    <div class="crowd-req-title">Запрос на ревью Питч-презентации</div>
+                    <div class="crowd-req-txt">Всем привет! Сделал питч презентацию, но ещё шлифуем, но уже немного запутались. Нужна помощь. Коротко про мою идею: ПОследний год активно развиваю проект 2yachts.com — совемещаем две компетенции: маркетплейс + vip брокер. Занимаемся продажей и арендой яхт (за прошлый год 4500 лидов)</div>
+                  </div>
+
+                  <div class="crowd-req-labels">
+                    <a href="#" class="iconed-sticker crowd-req-label"><i class="emoji">📣</i> Питч проекта</a>
+                    <a href="#" class="iconed-sticker crowd-req-label"><i class="emoji">👜️</i> Маркетплейсы</a>
+                    <a href="#" class="iconed-sticker crowd-req-label"><i class="emoji">🎞️</i> Презентации</a>
+                  </div>
+                </div>
+
+                <div class="crowd-req-actions">
+                  <div class="crowd-req-btn">
+                    <a href="#" class="button button_block button_yellow">Запрос</a>
+                  </div>
+                  <div class="crowd-req-stat">
+                    <div>0 ответов</div>
+                    <div>35 просмотров</div>
+                  </div>
+                </div>
+              </div>
+            </div><!--.list-->
+            
+
+
+          </div><!--.col-->
+
+          <div class="col-md-3">
+            <div class="crowd-tags">
+              <div class="crowd-tags-title">Популярные теги</div>
+              <div class="crowd-tags-items">
+                <a href="#" class="iconed-sticker"><i class="emoji">🚀</i> Гипотезы роста</a>
+                <a href="#" class="iconed-sticker"><i class="emoji">🏫</i> EdTech</a>
+                <a href="#" class="iconed-sticker"><i class="emoji">☁️</i> SaaS</a>
+                <a href="#" class="iconed-sticker"><i class="emoji">📣</i> Питч проекта</a>
+                <a href="#" class="iconed-sticker"><i class="emoji">🚫</i> Ограничения</a>
+                <a href="#" class="iconed-sticker"><i class="emoji">👩‍</i> Mental Health</a>
+                <a href="#" class="iconed-sticker"><i class="emoji">📈</i> Маркетинг</a>
+                <a href="#" class="iconed-sticker"><i class="emoji">💸</i> Привлечение инвестиций</a>
+                <a href="#" class="iconed-sticker"><i class="emoji">👫</i> Управление командой</a>
+                <a href="#" class="iconed-sticker"><i class="emoji">🔮</i> Продукт</a>
+              </div>
+            </div>
+          </div><!--.col-3-->
+        </div>
+      </div><!--.crowd-reqs-->
+
+    </div><!--.container-->
+  </div><!--bxsz-fix-->
+
+{% endblock %}

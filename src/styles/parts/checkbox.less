@@ -1,0 +1,40 @@
+.checkbox {
+    position: relative;
+    font-size: 1.8rem;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.checkbox__ctrl {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 1.8rem;
+    height: 1.8rem;
+
+    input {
+        display: none;
+    }
+}
+
+.checkbox__icon {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: data-uri('../img/checkbox.svg') center center no-repeat;
+    background-size: 100%;
+}
+
+.checkbox__ctrl input:checked + .checkbox__icon {
+    background-image: data-uri('../img/checkbox-active.svg');
+}
+
+.checkbox__label {
+    display: block;
+    padding: 0 0 0 2.5rem;
+}

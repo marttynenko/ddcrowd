@@ -1,0 +1,66 @@
+{% extends "./course.twig" %}
+
+{% block course_tabs %}
+    <div class="tabs">
+        <a class="tabs__item tabs__item_active">Содержание</a>
+        <a href="#" class="tabs__item">О курсе</a>
+    </div>
+{% endblock %}
+
+{% block course_content %}
+    <div class="course-content">
+        <div class="course-content__section active js-section">
+            <h3 class="course-content__title js-section-toggler">Название модуля</h3>
+
+            <div class="course-content__panels">
+                <a class="course-panel" href="#">
+                    <div class="course-panel__id">Урок №1</div>
+                    <div class="course-panel__title">Современный предприниматель. Как стать успешным в Digital: навыки и мышление</div>
+                    <div class="course-panel__duration">5 ч.</div>
+                    <div class="course-panel__progress">100%</div>
+                </a>
+
+                <a class="course-panel" href="#">
+                    <div class="course-panel__id">Задание №1</div>
+                    <div class="course-panel__title">Бизнес-план</div>
+                    <div class="course-panel__duration">5 ч.</div>
+                    <div class="course-panel__progress">100%</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="course-content__section active js-section">
+            <h3 class="course-content__title js-section-toggler">Название модуля</h3>
+
+            <div class="course-content__panels">
+                <a class="course-panel" href="#">
+                    <div class="course-panel__id">Урок №2</div>
+                    <div class="course-panel__title">Выбор и валидация идей: как создавать продукты, которые нужны людям</div>
+                    <div class="course-panel__duration">12 ч.</div>
+                    <div class="course-panel__progress">50%</div>
+                </a>
+
+                <div class="course-panel course-panel_disabled js-disabled-course">
+                    <div class="course-panel__id">Урок №3</div>
+                    <div class="course-panel__title">Методы исследования потребностей аудитории, способные подтвердить спрос, когда есть только идея</div>
+                    <div class="course-panel__duration">25 ч.</div>
+                    <div class="course-panel__progress">0%</div>
+                </div>
+
+                <div class="course-panel course-panel_disabled js-disabled-course">
+                    <div class="course-panel__id">Урок №4</div>
+                    <div class="course-panel__title">Как найти позиционирование и ценностное предложение, которое выделит вас из ряда конкурентов</div>
+                    <div class="course-panel__duration">25 ч.</div>
+                    <div class="course-panel__progress">0%</div>
+                </div>
+
+                <div class="course-panel course-panel_disabled js-disabled-course">
+                    <div class="course-panel__id">Задание №2</div>
+                    <div class="course-panel__title">Анализ по методологии JBTD</div>
+                    <div class="course-panel__duration">1 ч.</div>
+                    <div class="course-panel__progress">0%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

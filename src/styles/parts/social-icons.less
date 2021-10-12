@@ -1,0 +1,42 @@
+.social-icons {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-auto-flow: column;
+    grid-gap: 2rem;
+}
+
+.social-icon {
+    display: inline-block;
+    vertical-align: top;
+    width: 4.8rem;
+    height: 4.8rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+
+.social-icon_vk {
+    background-image: data-uri('../img/social-icons/vk.svg');
+}
+
+.social-icon_fb {
+    background-image: data-uri('../img/social-icons/fb.svg');
+}
+
+.social-icon_goog {
+    background-image: data-uri('../img/social-icons/goog.svg');
+}
+
+.social-icon_tw {
+    background-image: data-uri('../img/social-icons/tw.svg');
+}
+
+.social-icons_small {
+    grid-gap: 1rem;
+
+    .social-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+}

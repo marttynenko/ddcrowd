@@ -1,0 +1,20 @@
+.avatar-upload {
+    display: grid;
+    grid-template-columns: max-content 1fr 1fr;
+    grid-gap: 2.2rem;
+
+    @media (max-width: 649px) {
+        grid-template-columns: max-content 1fr;
+        grid-template-areas: 'avatar button' 'avatar button';
+    }
+}
+
+.avatar-upload__avatar {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+
+    @media (max-width: 649px) {
+        grid-area: avatar;
+    }
+}

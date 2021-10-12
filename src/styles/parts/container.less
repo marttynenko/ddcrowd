@@ -1,0 +1,17 @@
+.container {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 3rem;
+    max-width: 117rem;
+    width: 100%;
+
+    @media (max-width: 1023px) {
+        max-width: 77.5rem;
+    }
+
+    @media (max-width: 649px) {
+        box-sizing: content-box;
+        max-width: 36rem;
+        width: auto;
+    }
+}

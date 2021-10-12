@@ -1,0 +1,27 @@
+{% set active_menu = 'social' %}
+
+{% extends "./profile.twig" %}
+
+{% block profile_form %}
+    <div class="profile-social">
+        <div class="profile-social__item">
+            <div class="social-icon social-icon_vk"></div>
+            <button class="button button_transp-red">Отвязать</button>
+        </div>
+
+        <div class="profile-social__item">
+            <div class="social-icon social-icon_fb"></div>
+            <button class="button">Привязать</button>
+        </div>
+
+        <div class="profile-social__item">
+            <div class="social-icon social-icon_tw"></div>
+            <button class="button">Привязать</button>
+        </div>
+
+        <div class="profile-social__item">
+            <div class="social-icon social-icon_goog"></div>
+            <button class="button">Привязать</button>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,39 @@
+.pay {
+    font-size: 1.5rem;
+    margin: 0 0 2rem;
+}
+
+.pay__list {
+    border: 2px solid @gray;
+    border-width: 2px 0;
+}
+
+.pay__item {
+    padding: 1.5rem 0;
+    display: grid;
+    grid-template-columns: 1fr 9rem 3rem;
+    align-items: flex-start;
+}
+
+.pay__amount {
+    color: fade(@black, 50%);
+}
+
+.pay__remove {
+    justify-self: flex-end;
+}
+
+.pay__delete {
+    width: 1.6rem;
+    height: 1.6rem;
+    background: data-uri('../img/pay-close.svg') center center no-repeat;
+    cursor: pointer;
+}
+
+.pay__item_total {
+    font-weight: bold;
+
+    .pay__amount {
+        color: @black;
+    }
+}

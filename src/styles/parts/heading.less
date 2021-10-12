@@ -1,0 +1,30 @@
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8rem 0 4rem 0;
+
+    @media (max-width: 649px) {
+        display: block;
+        margin-top: 6rem;
+    }
+}
+
+.heading__title {
+    .h1();
+    margin: 0;
+
+    @media (max-width: 649px) {
+        .h1-mobile();
+        margin-bottom: 3rem;
+    }
+}
+
+.heading__side {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    grid-gap: 3rem;
+}
+

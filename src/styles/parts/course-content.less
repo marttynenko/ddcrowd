@@ -1,0 +1,38 @@
+.course-content__section {
+    &.active {
+        .course-content__panels {
+            display: block;
+        }
+
+        .course-content__title {
+            &:after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.course-content__title {
+    .h3();
+    position: relative;
+    line-height: 3.6rem;
+    padding: 0 0 0 5.6rem;
+    margin: 4rem 0 2rem;
+    cursor: pointer;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3.6rem;
+        height: 3.6rem;
+        background: @yellow data-uri('../img/toggler.svg') center center no-repeat;
+        background-size: 70%;
+        border-radius: 50%;
+    }
+}
+
+.course-content__panels {
+    display: none;
+}

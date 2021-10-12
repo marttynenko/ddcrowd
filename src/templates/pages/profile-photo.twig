@@ -1,0 +1,24 @@
+{% extends "./profile.twig" %}
+
+{% block outside %}
+    <div class="popup">
+        <div class="popup__content">
+            <div class="popup__heading popup__heading_medium-indent">
+                <h3 class="popup__title">Фото с вебкамеры</h3>
+                <div class="popup__close"></div>
+            </div>
+            <div class="photo-upload">
+                <p class="photo-upload__hint">Выберите область фотографии, которая будет отображаться в профиле.</p>
+
+                <div class="photo-upload__cover">
+                    <img class="photo-upload__image js-image-cropper" src="https://miro.medium.com/fit/c/400/268/0*HuxS4P08wdqSakma" alt="">
+                </div>
+
+                <div class="photo-upload__actions">
+                    <button class="button">Готово!</button>
+                    <button class="button button_transp">Сделать другой снимок</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

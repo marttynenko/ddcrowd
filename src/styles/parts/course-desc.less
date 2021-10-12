@@ -1,0 +1,50 @@
+.course-desc__tabs {
+    margin: 0 0 4rem;
+}
+
+.course-desc__desc {
+    max-width: 67rem;
+    color: fade(@black, 50%);
+
+    @media (max-width: 1023px) {
+        margin-bottom: 8rem;
+    }
+
+    h1, h2, h3 {
+        font-weight: normal;
+        margin: 0 0 3rem;
+    }
+
+    h3 {
+        .h3();
+    }
+
+    h2 {
+        .h2();
+    }
+
+    h1 {
+        .h1();
+    }
+
+    p {
+        .p();
+        margin: 1em 0;
+    }
+}
+
+.course-desc__content {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1023px) {
+        display: block;
+    }
+}
+
+.course-desc__bonus {
+    @media (max-width: 1023px) {
+        display: flex;
+        justify-content: center;
+    }
+}

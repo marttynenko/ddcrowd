@@ -1,0 +1,90 @@
+.course-panel {
+    position: relative;
+    display: grid;
+    align-items: center;
+    background: @gray;
+    border-radius: 1.8rem;
+    color: inherit;
+    text-decoration: none;
+    padding: 2.5rem 6rem 2.5rem 2rem;
+    margin: 0 0 2rem;
+    grid-template-columns: minmax(max-content, 15rem) 1fr minmax(max-content, 5rem) minmax(max-content, 5rem);
+    grid-gap: 2rem;
+
+    @media (max-width: 649px) {
+        padding: 1.5rem 5rem 1.5rem 2rem;
+        grid-template-columns: initial;
+        grid-template-areas: 'id duration progress' 'title title title';
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 1.5rem;
+        top: 50%;
+        margin-top: -1.2rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        background: data-uri('../img/course-panel-toggler.svg') center center no-repeat;
+        background-size: 100%;
+    }
+}
+
+.course-panel__id {
+    color: fade(@black, 50%);
+
+    @media (max-width: 649px) {
+        grid-area: id;
+    }
+}
+
+.course-panel__title {
+    @media (max-width: 649px) {
+        grid-area: title;
+    }
+}
+
+.course-panel__duration {
+    position: relative;
+    padding: 0 0 0 2.5rem;
+    color: fade(@black, 50%);
+
+    @media (max-width: 649px) {
+        grid-area: duration;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -0.8rem;
+        display: block;
+        width: 1.4rem;
+        height: 1.6rem;
+        background: data-uri('../img/course-panel-clock.svg') center center no-repeat;
+        background-size: 100%;
+    }
+}
+
+.course-panel__progress {
+    text-align: center;
+    color: fade(@black, 50%);
+
+    @media (max-width: 649px) {
+        grid-area: progress;
+    }
+}
+
+.course-panel_disabled {
+    opacity: 0.5;
+
+    &::after {
+        filter: grayscale();
+        opacity: 0.5;
+    }
+}

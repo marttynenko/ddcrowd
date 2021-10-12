@@ -1,0 +1,65 @@
+.user-menu {
+    position: relative;
+    z-index: 1;
+
+    &.active {
+        .user-menu__list {
+            opacity: 1;
+            pointer-events: initial;
+        }
+    }
+}
+
+.user-menu__toggler {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user-menu__avatar {
+    margin: 0 1rem 0 0;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 50%;
+    object-fit: cover;
+
+    @media (max-width: 649px) {
+        margin-right: 0;
+    }
+}
+
+.user-menu__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    background: data-uri('../img/toggler.svg') center center no-repeat;
+    background-size: 100%;
+}
+
+.user-menu__list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 1rem;
+    width: 20rem;
+    text-align: center;
+    padding: 2rem 0;
+    background: #fff;
+    border-radius: 1.8rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.user-menu__item {
+    .h3();
+    display: block;
+    line-height: 5rem;
+    color: @violete;
+    text-decoration: none;
+}
+
+.user-menu__name {
+    @media (max-width: 649px) {
+        display: none;
+    }
+}

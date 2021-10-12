@@ -1,0 +1,38 @@
+.bonus {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    width: 37rem;
+    display: flex;
+    background: fade(@yellow, 30%);
+    border-radius: 1.8rem;
+}
+
+.bonus__section {
+    padding: 2rem;
+}
+
+.bonus__section_main {
+    padding: 1.5rem 4rem 2.2rem;
+    background: fade(@yellow, 30%);
+    border-radius: 1.8rem 0 0 1.8rem;
+}
+
+.bonus__icon {
+    width: 9rem;
+    height: 9rem;
+    background: data-uri('../img/bonus.svg') center center no-repeat;
+    background-size: 100%;
+}
+
+.bonus__value {
+    .h2();
+    text-align: center;
+    color: @red;
+    font-weight: 700;
+}
+
+.bonus__text {
+    margin: 0 0 2rem;
+    font-size: 1.3rem;
+    line-height: 1.3;
+}
