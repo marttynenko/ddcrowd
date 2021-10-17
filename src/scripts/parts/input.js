@@ -5,6 +5,9 @@ export default class Input {
 
         this.input.addEventListener('input', this.checkActive.bind(this));
 
+        this.input.addEventListener('change', this.checkActive.bind(this));
+
+
         this.input.addEventListener('focus', () => {
             this.container.classList.add('focus');
         });
@@ -14,9 +17,12 @@ export default class Input {
         });
 
         this.checkActive();
+
     }
 
     checkActive() {
-        this.container.classList.toggle('active', this.input.value.length > 0);
+        this.input.value.length > 0
+            ? this.container.classList.add('active')
+            : this.container.classList.remove('active')
     }
 }

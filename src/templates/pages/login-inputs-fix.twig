@@ -1,0 +1,56 @@
+{% extends "./index.twig" %}
+
+{% block outside %}
+    <div class="popup">
+        <div class="popup__content">
+            <div class="form">
+                <div class="form__heading">
+                    <h3 class="form__title">Войти через почту</h3>
+                    <div class="popup__close"></div>
+                </div>
+
+                <div class="form__content">
+                    <div class="field">
+                        <input type="email" class="input__ui" placeholder="Ваша почта">
+                    </div>
+
+                    <div class="field">
+
+                        <div class="input input_success js-input">
+                            <input type="password" class="input__ui" placeholder="Пароль" />
+
+                            <span class="input__hint">
+                                <a href="#">Не помню</a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <div class="checkbox">
+                            <label class="checkbox__ctrl">
+                                <input type="checkbox">
+                                <span class="checkbox__icon"></span>
+                            </label>
+                            <span class="checkbox__label">
+                                Принимаю <a href="#">оферту</a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <button class="button button_wide" type="submit">Войти</button>
+                </div>
+
+                <div class="form__footer">
+                    <p class="form__small-title">или вы можете войти через соцсети</p>
+
+                    <div class="social-icons">
+                        <a href="#" class="social-icon social-icon_vk"></a>
+                        <a href="#" class="social-icon social-icon_fb"></a>
+                        <a href="#" class="social-icon social-icon_tw"></a>
+                        <a href="#" class="social-icon social-icon_goog"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
