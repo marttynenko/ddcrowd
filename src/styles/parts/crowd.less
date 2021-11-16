@@ -1311,9 +1311,6 @@ i.emoji {
   }
 }
 
-.course-head {
-  overflow: hidden;
-}
 .course-head-with-crowd {
   .stats {
     &:not(:last-child) {
@@ -1322,5 +1319,42 @@ i.emoji {
   }
   .stats {
     grid-auto-columns: 100px;
+  }
+}
+
+.tippy-box {
+  .crowd-coursehead-stats-title {
+    color: #071013;
+  }
+}
+
+.root {
+  min-width: 100%;
+  overflow-x: hidden;
+}
+.stats-wrap {
+  padding: 3rem 3rem 1rem;
+
+  .stats {
+    padding: 0;
+    margin-bottom: 2rem;
+    grid-auto-columns: 95px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-wrap {
+    .stats {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .stats-wrap {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
