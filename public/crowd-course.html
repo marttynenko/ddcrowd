@@ -69,57 +69,70 @@
                                     <div class="ui-progress-bar">
                                         <div class="ui-progress-progress" style="width: 23%;"></div>
                                     </div>
-                                </div>
-                            </div>
 
-                            <div class="crowd-coursehead-stats">
-                                <div class="crowd-coursehead-stats-group">
-                                    <div class="crowd-coursehead-stats-items">
-                                        <div class="stat">
-                                            <div class="stat__icon stat__icon_course"></div>
-                                            <div class="stat__value">1 из 6</div>
-                                            <div class="stat__label">уроков</div>
-                                        </div>
-                                        <div class="stat">
-                                            <div class="stat__icon stat__icon_tasks"></div>
-                                            <div class="stat__value">1 из 8</div>
-                                            <div class="stat__label">заданий</div>
-                                        </div>
-                                        <div class="stat">
-                                            <div class="stat__icon stat__icon_duration"></div>
-                                            <div class="stat__value">8 недель</div>
-                                            <div class="stat__label">длительность</div>
-                                        </div>
-                                        <div class="stat">
-                                            <div class="stat__icon stat__icon_date"></div>
-                                            <div class="stat__value">12 апреля</div>
-                                            <div class="stat__label">начат</div>
-                                        </div>
-                                        <div class="stat">
-                                            <div class="stat__icon stat__icon_date"></div>
-                                            <div class="stat__value">12 октября</div>
-                                            <div class="stat__label">завершение</div>
+                                    <div class="info-mobile" id="info-mobile">
+                                        <a href="#" class="ico ico-info"><img src="img/i-ico.svg" alt=""></a>
+                                        <div class="crowd-coursehead-stats-clone">
+                                            <div class="crowd-coursehead-stats" id="stat-clone">
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="crowd-coursehead-stats-group">
-                                    <div class="crowd-coursehead-stats-title">Крауд задачи</div>
-                                    <div class="crowd-coursehead-stats-items">
-                                        <div class="stat">
-                                            <div class="stat__icon stat__icon_course"></div>
-                                            <div class="stat__value">1 из 3</div>
-                                            <div class="stat__label">создано запросов</div>
+
+                            </div>
+
+                            <div class="crowd-coursehead-stats" id="stat-parent">
+                                <div class="crowd-coursehead-stats-groups">
+                                    <div class="crowd-coursehead-stats-group">
+                                        <div class="crowd-coursehead-stats-items">
+                                            <div class="stat">
+                                                <div class="stat__icon stat__icon_course"></div>
+                                                <div class="stat__value">1 из 6</div>
+                                                <div class="stat__label">уроков</div>
+                                            </div>
+                                            <div class="stat">
+                                                <div class="stat__icon stat__icon_tasks"></div>
+                                                <div class="stat__value">1 из 8</div>
+                                                <div class="stat__label">заданий</div>
+                                            </div>
+                                            <div class="stat">
+                                                <div class="stat__icon stat__icon_duration"></div>
+                                                <div class="stat__value">8 недель</div>
+                                                <div class="stat__label">длительность</div>
+                                            </div>
+                                            <div class="stat">
+                                                <div class="stat__icon stat__icon_date"></div>
+                                                <div class="stat__value">12 апреля</div>
+                                                <div class="stat__label">начат</div>
+                                            </div>
+                                            <div class="stat">
+                                                <div class="stat__icon stat__icon_date"></div>
+                                                <div class="stat__value">12 октября</div>
+                                                <div class="stat__label">завершение</div>
+                                            </div>
                                         </div>
-                                        <div class="stat">
-                                            <div class="stat__icon stat__icon_course"></div>
-                                            <div class="stat__value">2 из 9</div>
-                                            <div class="stat__label">ответов на запросы</div>
-                                        </div>
-                                        <div class="stat">
-                                            <div class="stat__icon stat__icon_course"></div>
-                                            <div class="stat__value">1 из 9</div>
-                                            <div class="stat__label">получено ответов</div>
+                                    </div>
+
+                                    <div class="crowd-coursehead-stats-group">
+                                        <div class="crowd-coursehead-stats-title">Крауд задачи</div>
+                                        <div class="crowd-coursehead-stats-items">
+                                            <div class="stat">
+                                                <div class="stat__icon stat__icon_course"></div>
+                                                <div class="stat__value">1 из 3</div>
+                                                <div class="stat__label">создано запросов</div>
+                                            </div>
+                                            <div class="stat">
+                                                <div class="stat__icon stat__icon_course"></div>
+                                                <div class="stat__value">2 из 9</div>
+                                                <div class="stat__label">ответов на запросы</div>
+                                            </div>
+                                            <div class="stat">
+                                                <div class="stat__icon stat__icon_course"></div>
+                                                <div class="stat__value">1 из 9</div>
+                                                <div class="stat__label">получено ответов</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -211,6 +224,37 @@
         </div>
         <!--bxsz-fix-->
 
+        <script>
+            let parent = document.getElementById('stat-parent');
+            let parent2 = document.getElementById('stat-clone');
+            let elem = parent.querySelector('.crowd-coursehead-stats-groups');
+
+            let clone = elem.cloneNode(true);
+            parent2.appendChild(clone);
+
+
+            document.querySelector('.ico-info').onclick = function() {
+                if (this.classList.contains('active')) {
+                    document.querySelector('.crowd-coursehead-stats-clone').style.display = 'none';
+                    this.classList.remove("active");
+
+                } else {
+                    this.classList.add("active");
+                    document.querySelector('.crowd-coursehead-stats-clone').style.display = 'block';
+                    var c = document.getElementById('info-mobile');
+                    var screenWidth = window.screen.width;
+                    if (screenWidth >= 770) {
+                        parent2.style.left = '-' + c.offsetLeft + 'px';
+                        parent2.style.top = '-' + (parent2.offsetHeight + 20) + 'px';
+                    } else {
+                        parent2.style.right = '-30px';
+                        parent2.style.bottom = '-' + (parent2.offsetHeight + 32) + 'px';
+                    }
+                }
+                return false;
+            }
+        </script>
+
 
         <div class="container">
             <footer class="footer">
@@ -231,6 +275,7 @@
     <script src="https://unpkg.com/@popperjs/core@2" defer></script>
     <script src="https://unpkg.com/tippy.js@6" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js" defer></script>
+    <script src="//cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" defer></script>
     <script src="scripts/main.js" defer></script>
 
 </body>

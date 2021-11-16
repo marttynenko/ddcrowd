@@ -1,38 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "../parts/layout.twig" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block content %}
+    <div class="course-head" style="background: {{head_bg|default('#E9F1F5')}};">
+        <div class="container">
+            <div class="course-head__content">
+                <h1 class="course-head__title">Digital Dolina:<br/> легендарный базовый курс</h1>
 
-    <title>Digital Dolina</title>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css">
-    <link rel="stylesheet" href="styles/main.css">
-</head>
-
-<body>
-
-    <div class="root">
-        <header class="header">
-            <div class="header__section header__section_main">
-                <a href="#">
-                    <span class="logo">Digital Dolina</span>
-                </a>
-            </div>
-            <div class="header__section header__section_side">
-                <button class="button button_yellow button_small">Войти</button>
-            </div>
-        </header>
-
-        <div class="course-head" style="background: #E9F1F5;">
-            <div class="container">
-                <div class="course-head__content">
-                    <h1 class="course-head__title">Digital Dolina:<br /> легендарный базовый курс</h1>
-
-                    <div class="course-head__status">
+                <div class="course-head__status">
+                    {% block course_progress %}
                         <div class="progress">
                             <div class="progress__value">
                                 Пройден 27 марта 2021
@@ -43,57 +18,86 @@
                                 <div class="progress__done" style="width: 100%"></div>
                             </div>
                         </div>
-                    </div>
+                    {% endblock %}
+                </div>
 
-                    <div class="course-head__stats js-stats">
-                        <div class="stats">
-                            <div class="stat">
-                                <div class="stat__icon stat__icon_course"></div>
-                                <div class="stat__value">20 из 20</div>
-                                <div class="stat__label">уроков</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat__icon stat__icon_tasks"></div>
-                                <div class="stat__value">20 из 20</div>
-                                <div class="stat__label">заданий</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat__icon stat__icon_duration"></div>
-                                <div class="stat__value">7 недель</div>
-                                <div class="stat__label">длительность</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat__icon stat__icon_date"></div>
-                                <div class="stat__value">10 апреля</div>
-                                <div class="stat__label">начат</div>
-                            </div>
-                            <div class="stat">
-                                <div class="stat__icon stat__icon_access"></div>
-                                <div class="stat__value">Бессрочно</div>
-                                <div class="stat__label">Доступ</div>
-                            </div>
+                <div class="course-head__stats js-stats course-head-with-crowd">
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat__icon stat__icon_course"></div>
+                            <div class="stat__value">20 из 20</div>
+                            <div class="stat__label">уроков</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__icon stat__icon_tasks"></div>
+                            <div class="stat__value">20 из 20</div>
+                            <div class="stat__label">заданий</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__icon stat__icon_duration"></div>
+                            <div class="stat__value">7 недель</div>
+                            <div class="stat__label">длительность</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__icon stat__icon_date"></div>
+                            <div class="stat__value">10 апреля</div>
+                            <div class="stat__label">начат</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__icon stat__icon_access"></div>
+                            <div class="stat__value">Бессрочно</div>
+                            <div class="stat__label">Доступ</div>
                         </div>
                     </div>
 
-                    <img class="course-head__cover" src="img/courses/1.png" alt="" srcset="img/courses/1.png 1x, img/courses/1@2x.png 2x">
+                    
+                    <div class="crowd-coursehead-stats-title">Крауд задачи</div>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat__icon stat__icon_course"></div>
+                            <div class="stat__value">1 из 3</div>
+                            <div class="stat__label">создано запросов</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__icon stat__icon_course"></div>
+                            <div class="stat__value">2 из 9</div>
+                            <div class="stat__label">ответов на запросы</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__icon stat__icon_course"></div>
+                            <div class="stat__value">1 из 9</div>
+                            <div class="stat__label">получено ответов</div>
+                        </div>
+                    </div>
+                    
+                </div>
 
-                    <div class="course-head__actions">
+                {% block course_cover %}
+                    <img class="course-head__cover" src="img/courses/1.png" alt="" srcset="img/courses/1.png 1x, img/courses/1@2x.png 2x">
+                {% endblock %}
+
+                <div class="course-head__actions">
+                    {% block course_actions %}
                         <a class="button button_wide" href="#">Открыть сертификат</a>
                         <a class="button button_wide button_transp" href="#">Подробнее о курсе</a>
-                    </div>
+                    {% endblock %}
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="course-desc">
-            <div class="container">
-                <div class="course-desc__tabs">
+    <div class="course-desc">
+        <div class="container">
+            <div class="course-desc__tabs">
+                {% block course_tabs %}
                     <div class="tabs">
                         <a href="#" class="tabs__item">Содержание</a>
                         <a class="tabs__item tabs__item_active">О курсе</a>
                     </div>
-                </div>
+                {% endblock %}
+            </div>
 
+            {% block course_content %}
                 <div class="course-desc__content">
                     <div class="course-desc__desc">
                         <h3>11 звёздных бизнесменов из Кремниевой долины и России помогут запустить сильный продукт, обойти конкурентов и получить финансирование.</h3>
@@ -122,31 +126,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <footer class="footer">
-                <div class="footer__left">
-                    @ Digital Dolina 2021<br />
-                    <a href="#">Политика конфиденциальности</a>
-                </div>
-                <div class="footer__right">
-                    <div class="footer__icon footer__icon_tg"></div>
-                    <div class="footer__icon footer__icon_wp"></div>
-                </div>
-            </footer>
+            {% endblock %}
         </div>
     </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js" defer></script>
-    <script src="https://unpkg.com/@popperjs/core@2" defer></script>
-    <script src="https://unpkg.com/tippy.js@6" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js" defer></script>
-    <script src="//cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" defer></script>
-    <script src="scripts/main.js" defer></script>
-
-</body>
-
-</html>
+{% endblock %}

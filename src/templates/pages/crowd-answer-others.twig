@@ -43,6 +43,10 @@
             <div class="crowd-req-btn">
               <a href="#" class="button button_block button_yellow">Запрос</a>
             </div>
+            <div class="crowd-req-stat crowd-req-stat-mobile">
+              <div>5 ответов</div>
+              <div>35 просмотров</div>
+            </div>
           </div>
 
           <div class="crowd-req-answer">
@@ -75,7 +79,7 @@
                       <a href="#" class="crowd-reply-dislike crowd-reply-action">1</a>
                     </div>
 
-                    <div class="crowd-reply-tocomment"><a href="#">Комментировать</a></div>
+                    <div class="crowd-reply-tocomment"><a href="#">Редактировать</a><a href="#">Комментировать</a></div>
                   </div>
                 </div>
               </div>
@@ -102,7 +106,7 @@
                       <a href="#" class="crowd-reply-dislike crowd-reply-action">1</a>
                     </div>
 
-                    <div class="crowd-reply-tocomment"><a href="#">Комментировать</a></div>
+                    <div class="crowd-reply-tocomment"><a href="#">Редактировать</a><a href="#">Комментировать</a></div>
                   </div>
                 </div>
                 <div class="crowd-reply-answers">
@@ -127,7 +131,7 @@
                         <a href="#" class="crowd-reply-dislike crowd-reply-action">4</a>
                       </div>
 
-                      <div class="crowd-reply-tocomment"><a href="#">Комментировать</a></div>
+                      <div class="crowd-reply-tocomment"><a href="#">Редактировать</a><a href="#">Комментировать</a></div>
                     </div>
                   </div>
 
@@ -144,9 +148,33 @@
                     <div class="visual-esitor-wrap">
                       <textarea name="comment" id="comment" rows="6" placeholder="Введите комментарий и нажмите Enter чтобы отправить" class="visual-editor"></textarea>
                     </div>
+
+                    <div class="crowd-reply-bottom">
+                      <div class="crowd-reply-actions">
+                        <a href="#" class="crowd-reply-like crowd-reply-action">30</a>
+                        <a href="#" class="crowd-reply-dislike crowd-reply-action">4</a>
+                      </div>
+
+                      <div class="crowd-reply-tocomment"><a href="#" class="crowd-reply-cancel">Отмена</a><a href="#">Сохранить</a></div>
+                    </div>
                   </div>
 
                 </div><!--.answers-->
+
+                <div class="crowd-reply crowd-comment">
+                  <div class="crowd-reply-head">
+                    <div class="crowd-reply-author">
+                      <div class="crowd-reply-author-ava"><img src="./img/crowd/crowd-ava.png" srcset="./img/crowd/crowd-ava@2x.png 2x" alt="Станислав К."></div>
+                      <div class="crowd-reply-author-names">
+                        <div class="crowd-reply-author-name">Станислав К.</div>
+                        <div class="crowd-reply-author-pos">Основатель проекта Greatsteve</div>
+                      </div>
+                    </div>
+                  </div><!--.head-->
+                  <div class="visual-esitor-wrap">
+                    <textarea name="comment" id="comment" rows="6" placeholder="Введите комментарий и нажмите Enter чтобы отправить" class="visual-editor"></textarea>
+                  </div>
+                </div>
               </div><!--.wrap-->
             </div><!--replys-->
 
@@ -158,8 +186,8 @@
 
       <div class="col-md-3">
         <div class="crowd-req-stat">
-          <div class="crowd-req-stat-rate"><span class="crowd-req-stat-rate-value">3.0</span> Рейтинг</div>
-          <div>0 ответов</div>
+          {# <div class="crowd-req-stat-rate"><span class="crowd-req-stat-rate-value">3.0</span> Рейтинг</div> #}
+          <div>5 ответов</div>
           <div>35 просмотров</div>
         </div>
       </div>

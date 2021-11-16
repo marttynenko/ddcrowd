@@ -16,10 +16,22 @@
                 <div class="ui-progress-bar">
                   <div class="ui-progress-progress" style="width: 23%;"></div>
                 </div>
+
+                <div class="info-mobile" id="info-mobile">
+                  <a href="#" class="ico ico-info"><img src="img/i-ico.svg" alt=""></a>
+                  <div class="crowd-coursehead-stats-clone">
+                      <div class="crowd-coursehead-stats"  id="stat-clone">
+                      
+                      </div>
+                  </div>
+                </div>
               </div>
+
+              
             </div>
 
-            <div class="crowd-coursehead-stats">
+            <div class="crowd-coursehead-stats" id="stat-parent">
+              <div class="crowd-coursehead-stats-groups">
               <div class="crowd-coursehead-stats-group">
               <div class="crowd-coursehead-stats-items">
                 <div class="stat">
@@ -69,6 +81,7 @@
                     <div class="stat__label">получено ответов</div>
                   </div>
                 </div>
+              </div>
               </div>
             </div>
 
@@ -153,5 +166,38 @@
       </div><!--.courses-->
     </div><!--.container-->
   </div><!--bxsz-fix-->
+
+  <script>
+      let parent = document.getElementById('stat-parent');
+      let parent2 = document.getElementById('stat-clone');
+      let elem = parent.querySelector('.crowd-coursehead-stats-groups');
+
+      let clone = elem.cloneNode(true);
+      parent2.appendChild(clone);
+
+      
+      document.querySelector('.ico-info').onclick = function() {
+          if(this.classList.contains('active')){
+              document.querySelector('.crowd-coursehead-stats-clone').style.display = 'none';
+              this.classList.remove("active");
+
+          }
+          else{
+              this.classList.add("active");
+              document.querySelector('.crowd-coursehead-stats-clone').style.display = 'block';
+              var c = document.getElementById('info-mobile');
+              var screenWidth = window.screen.width;
+              if(screenWidth>=770){
+                  parent2.style.left = '-'+c.offsetLeft+'px';
+                  parent2.style.top = '-'+ (parent2.offsetHeight + 20) +'px';
+              }
+              else{
+                  parent2.style.right = '-30px';
+                  parent2.style.bottom = '-' + (parent2.offsetHeight + 32) + 'px';
+              }
+          }
+          return false;
+        }
+    </script>
 
 {% endblock %}

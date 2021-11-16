@@ -85,37 +85,31 @@ export default class Page {
 
         //лениво подгружаем визуальный редактор
         if (document.querySelector('.visual-editor')) {
-            FARBA.lazyLibraryLoad(
-                '//cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js',
-                '',
-                () => {
-                    tinymce.init({
-                        selector: 'textarea.visual-editor',
-                        menubar: false,
-                        statusbar: false,
-                        min_height: 200,
-                        max_height: 300,
-                        autoresize_overflow_padding: 0,
-                        plugins: [
-                            'advlist autolink lists link image anchor',
-                            'media table paste imagetools wordcount autoresize'
-                        ],
-                        toolbar: 'bold italic underline strikethrough | styleselect | alignleft aligncenter alignright alignjustify | bullist numlist | table link',
-                        content_style: `@font-face {
-                            font-family: PPPangramSans;
-                            src: url('./fonts/pangram/PPPangramSans-Medium.woff2') format('woff2'), url('./fonts/pangram/PPPangramSans-Medium.woff') format('woff');
-                            font-weight: normal;
-                            font-style: normal;
-                            font-display: swap;
-                          }
-                          body { font-family: PPPangramSans; }`,
-                        //путь загрузки изображений
-                        // images_upload_url: '...',
-                        //обработчик загрузки, смотреть https://www.tiny.cloud/docs/general-configuration-guide/upload-images/
-                        // images_upload_handler: function (blobInfo, success, failure) {},
-                    });
-                }
-            )
+            tinymce.init({
+                selector: 'textarea.visual-editor',
+                menubar: false,
+                statusbar: false,
+                min_height: 200,
+                max_height: 300,
+                autoresize_overflow_padding: 0,
+                plugins: [
+                    'advlist autolink lists link image anchor',
+                    'media table paste imagetools wordcount autoresize'
+                ],
+                toolbar: 'bold italic underline strikethrough | styleselect | alignleft aligncenter alignright alignjustify | bullist numlist | table link',
+                content_style: `@font-face {
+                    font-family: PPPangramSans;
+                    src: url('./fonts/pangram/PPPangramSans-Medium.woff2') format('woff2'), url('./fonts/pangram/PPPangramSans-Medium.woff') format('woff');
+                    font-weight: normal;
+                    font-style: normal;
+                    font-display: swap;
+                  }
+                  body { font-family: PPPangramSans; }`,
+                //путь загрузки изображений
+                // images_upload_url: '...',
+                //обработчик загрузки, смотреть https://www.tiny.cloud/docs/general-configuration-guide/upload-images/
+                // images_upload_handler: function (blobInfo, success, failure) {},
+            });
         }
 
         

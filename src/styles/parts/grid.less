@@ -111,11 +111,13 @@
 .row {
 	margin-left: -@col_gutter;
 	margin-right: -@col_gutter;
+	// max-width: calc(100% + (@col_gutter * 2));
 }
 [class*="col-"] {
-  // width: 100%;
+  width: 100%;
   padding-left: @col_gutter;
   padding-right: @col_gutter;
+	max-width: 100%;
 }
 
 
@@ -158,29 +160,29 @@
 @media (min-width: (#breakpoints[xs])) {
   .cols-loop(8, xs);
 
-  .container, .inner {
-    max-width: #breakpoints[xs];
-  }
+  // .container, .inner {
+  //   max-width: #breakpoints[xs];
+  // }
 }
 @media (min-width: (#breakpoints[sm])) {
   .cols-loop(8, sm);
 
-  .container, .inner {
-    max-width: #breakpoints[sm] + @col_gutter * 2;
-  }
+  // .container, .inner {
+  //   max-width: #breakpoints[sm] + @col_gutter * 2;
+  // }
 }
 @media (min-width: (#breakpoints[md])) {
   .cols-loop(12, md);
 
-  .container, .inner {
-    // max-width: #breakpoints[md];
-    max-width: #breakpoints[md] + @col_gutter * 2;
-  }
+  // .container, .inner {
+  //   // max-width: #breakpoints[md];
+  //   max-width: #breakpoints[md] + @col_gutter * 2;
+  // }
 }
 @media (min-width: (#breakpoints[lg])) {
   .cols-loop(12, lg);
 
-  .container, .inner {
-    max-width: #breakpoints[lg];
-  }
+  // .container, .inner {
+  //   max-width: #breakpoints[lg];
+  // }
 }

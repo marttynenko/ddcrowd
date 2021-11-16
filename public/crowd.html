@@ -85,8 +85,20 @@
                     <div class="row">
                         <div class="col-crowd-params col-md-9">
                             <div class="crowd-search-line">
-                                <div class="row valign-center">
+
+                                <div class="row valign-center search-mobile">
                                     <div class="col-crowd-search">
+                                        <div class="input js-input">
+                                            <input name="crowd_search" id="crowd_search" type="text" class="input__ctrl">
+                                            <label for="crowd_search" class="input__label">Поиск</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-crowd-btn">
+                                        <a href="#" class="button button_block">Создать запрос</a>
+                                    </div>
+                                </div>
+                                <div class="row valign-center">
+                                    <div class="col-crowd-search col-crowd-search-desctop">
                                         <div class="input js-input">
                                             <input name="crowd_search" id="crowd_search" type="text" class="input__ctrl">
                                             <label for="crowd_search" class="input__label">Поиск</label>
@@ -194,7 +206,7 @@
                             <!--.tags-->
                         </div>
 
-                        <div class="col-crowd-btn col-md-3">
+                        <div class="col-crowd-btn col-crowd-btn-desctop col-md-3">
                             <a href="#" class="button button_block">Создать запрос</a>
                         </div>
                     </div>
@@ -227,6 +239,11 @@
                                         <div class="crowd-req-descr">
                                             <div class="crowd-req-title"><a href="#">Запрос на ревью Питч-презентации</a></div>
                                             <div class="crowd-req-txt">Всем привет! Сделал питч презентацию, но ещё шлифуем, но уже немного запутались. Нужна помощь. Коротко про мою идею: ПОследний год активно развиваю проект 2yachts.com — совемещаем две компетенции: маркетплейс + vip брокер. Занимаемся продажей и арендой яхт (за прошлый год 4500 лидов)</div>
+                                        </div>
+
+                                        <div class="crowd-req-stat crowd-req-stat-list-mobile">
+                                            <div>0 ответов</div>
+                                            <div>35 просмотров</div>
                                         </div>
 
                                         <div class="crowd-req-labels">
@@ -270,6 +287,11 @@
                                             <div class="crowd-req-txt">Всем привет! Сделал питч презентацию, но ещё шлифуем, но уже немного запутались. Нужна помощь. Коротко про мою идею: ПОследний год активно развиваю проект 2yachts.com — совемещаем две компетенции: маркетплейс + vip брокер. Занимаемся продажей и арендой яхт (за прошлый год 4500 лидов)</div>
                                         </div>
 
+                                        <div class="crowd-req-stat crowd-req-stat-list-mobile">
+                                            <div>0 ответов</div>
+                                            <div>35 просмотров</div>
+                                        </div>
+
                                         <div class="crowd-req-labels">
                                             <a href="#" class="iconed-sticker crowd-req-label"><i class="emoji">📣</i>Питч проекта</a>
                                             <a href="#" class="iconed-sticker crowd-req-label"><i class="emoji">👜️</i>Маркетплейсы</a>
@@ -309,6 +331,11 @@
                                         <div class="crowd-req-descr">
                                             <div class="crowd-req-title"><a href="#">Запрос на ревью Питч-презентации</a></div>
                                             <div class="crowd-req-txt">Всем привет! Сделал питч презентацию, но ещё шлифуем, но уже немного запутались. Нужна помощь. Коротко про мою идею: ПОследний год активно развиваю проект 2yachts.com — совемещаем две компетенции: маркетплейс + vip брокер. Занимаемся продажей и арендой яхт (за прошлый год 4500 лидов)</div>
+                                        </div>
+
+                                        <div class="crowd-req-stat crowd-req-stat-list-mobile">
+                                            <div>0 ответов</div>
+                                            <div>35 просмотров</div>
                                         </div>
 
                                         <div class="crowd-req-labels">
@@ -391,6 +418,7 @@
     <script src="https://unpkg.com/@popperjs/core@2" defer></script>
     <script src="https://unpkg.com/tippy.js@6" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js" defer></script>
+    <script src="//cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" defer></script>
     <script src="scripts/main.js" defer></script>
 
 </body>
