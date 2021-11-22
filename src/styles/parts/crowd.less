@@ -698,13 +698,13 @@ label.iconed-sticker {
   height: 60px;
   margin-bottom: 20px;
   padding: 0px 60px 0px 20px;
-  background: #F1F0F2;
+  background-color: #F1F0F2;
   border-radius: 18px;
   color: rgba(@black,.5);
   text-decoration: none;
   line-height: 1.15;
   opacity: 0.5;
-  transition: box-shadow .15s;
+  transition: background .15s;
 
   &-type {
     flex: 0 0 150px;
@@ -767,10 +767,19 @@ a.courses-card {
   }
 
   &:hover {
-    box-shadow: inset 0px 0px 0px 1px @violete;
+    color: rgba(@black,.5);
+    background-color: rgba(#F1F0F2, .6);
 
     &:after {
       transform: rotate(-90deg) translate3d(0, 8px, 0);
+    }
+  }
+
+  &-completed {
+    background-color: rgba(113, 61, 242, 0.2);
+
+    &:hover {
+      background-color: rgba(113, 61, 242, 0.15);
     }
   }
 }
@@ -1356,5 +1365,13 @@ i.emoji {
     padding-top: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+}
+.course-head__info-icon {
+  z-index: 99;
+
+  &-red {
+    filter: hue-rotate(99deg);
+    opacity: 0.8;
   }
 }
